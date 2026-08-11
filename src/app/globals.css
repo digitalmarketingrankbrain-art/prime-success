@@ -1,26 +1,192 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --font-cinzel: "Cinzel", serif;
+    --font-playfair: "Playfair Display", serif;
+    --font-jakarta: "Plus Jakarta Sans", sans-serif;
+
+    /* Default Dark Mode CSS Variables */
+    --bg-black: #080604;
+    --bg-dark: #0F0C08;
+    --bg-card: #16120B;
+    --text-ivory: #F9F5EC;
+    --text-cream: #E8DCC4;
+    --border-gold: rgba(229, 193, 88, 0.25);
+    --gold-primary: #E5C158;
+    --gold-dark: #B38E22;
+  }
+
+  /* Ultra-Luxurious High-Contrast Royal Light Mode */
+  html.light {
+    --bg-black: #F4EFE6;
+    --bg-dark: #E8DFCC;
+    --bg-card: #FFFFFF;
+    --text-ivory: #0C0A06;
+    --text-cream: #2C2314;
+    --border-gold: rgba(158, 121, 21, 0.45);
+    --gold-primary: #85640D;
+    --gold-dark: #5A4305;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@theme {
+  --color-royal-red: #6B0E16;
+  --color-royal-red-dark: #32060B;
+  --color-royal-gold: var(--gold-primary);
+  --color-royal-gold-light: #F4E296;
+  --color-royal-gold-dark: var(--gold-dark);
+  --color-luxury-black: var(--bg-black);
+  --color-luxury-dark: var(--bg-dark);
+  --color-luxury-card: var(--bg-card);
+  --color-ivory: var(--text-ivory);
+  --color-cream: var(--text-cream);
+  
+  --font-serif-royal: var(--font-cinzel), serif;
+  --font-serif-editorial: var(--font-playfair), serif;
+  --font-sans: var(--font-jakarta), sans-serif;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold-dark);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-primary);
+}
+
+/* Gold Gradient Utilities */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFF1B0 0%, #E5C158 45%, #B38E22 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html.light .text-gold-gradient {
+  background: linear-gradient(135deg, #85640D 0%, #4D3904 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gold-gradient {
+  border-image: linear-gradient(to right, #E5C158, #F4E296, #B38E22) 1;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #F4E296 0%, #E5C158 50%, #B38E22 100%);
+}
+
+.bg-royal-gradient {
+  background: linear-gradient(180deg, #32060B 0%, var(--bg-black) 100%);
+}
+
+.bg-gold-glow {
+  background: radial-gradient(circle, rgba(229, 193, 88, 0.12) 0%, rgba(8, 6, 4, 0) 70%);
+}
+
+/* Gold Noise overlay utility */
+.bg-noise {
+  background-image: radial-gradient(rgba(179, 142, 34, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Crisp Light Mode Specific UI Fixes */
+html.light .bg-luxury-card {
+  background-color: #FFFFFF !important;
+  box-shadow: 0 10px 30px -8px rgba(35, 25, 5, 0.1), 0 0 1px rgba(158, 121, 21, 0.4);
+}
+
+html.light .bg-luxury-dark {
+  background-color: #EFE7D7 !important;
+}
+
+html.light .bg-royal-red-dark {
+  background-color: #520910 !important;
+  color: #F9F5EC !important;
+}
+
+html.light .bg-royal-red-dark h2,
+html.light .bg-royal-red-dark h3,
+html.light .bg-royal-red-dark p,
+html.light .bg-royal-red-dark blockquote {
+  color: #F9F5EC !important;
+}
+
+html.light .bg-royal-red {
+  background-color: #6B0E16 !important;
+  color: #F9F5EC !important;
+}
+
+html.light .bg-royal-red h2,
+html.light .bg-royal-red h3,
+html.light .bg-royal-red p {
+  color: #F9F5EC !important;
+}
+
+html.light input,
+html.light select,
+html.light textarea {
+  background-color: #F8F3E8 !important;
+  color: #0C0A06 !important;
+  border-color: rgba(158, 121, 21, 0.5) !important;
+}
+
+html.light header {
+  background-color: rgba(244, 239, 230, 0.96) !important;
+  border-bottom-color: rgba(158, 121, 21, 0.3) !important;
+}
+
+html.light footer {
+  background-color: #161109 !important;
+  color: #F9F5EC !important;
+}
+
+html.light footer p,
+html.light footer a,
+html.light footer span,
+html.light footer h4 {
+  color: #E8DCC4 !important;
+}
+
+html.light .hero-bg-img {
+  opacity: 0.12 !important;
+  filter: contrast(1.3) sepia(0.3);
+}
+
+html.light .dark-overlay {
+  display: none !important;
+}
+
+html.light .light-overlay {
+  display: block !important;
 }
