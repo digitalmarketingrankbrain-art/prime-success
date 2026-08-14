@@ -142,20 +142,20 @@ export default function Hero() {
         </div>
 
         {/* Hero Interactive Live Statistics Pill */}
-        <div className="hero-stats-pill mt-4 px-6 py-3 bg-[#120E09]/80 backdrop-blur-md border border-[#E5C158]/35 rounded-full flex flex-wrap items-center justify-center gap-6 text-xs text-[#E8DCC4] shadow-xl">
+        <div className="hero-stats-pill mt-4 px-5 sm:px-6 py-3 bg-[#120E09]/80 backdrop-blur-md border border-[#E5C158]/35 rounded-2xl sm:rounded-full flex flex-wrap items-center justify-center gap-x-3 gap-y-2 sm:gap-6 text-xs text-[#E8DCC4] shadow-xl">
           <div className="flex items-center gap-2">
-            <BookOpen className="w-4 h-4 text-[#E5C158]" />
-            <span className="font-bold text-[#F9F5EC]">21 Digital Print Editions</span>
+            <BookOpen className="w-4 h-4 text-[#E5C158] shrink-0" />
+            <span className="font-bold text-[#F9F5EC] whitespace-nowrap">21 Digital Print Editions</span>
           </div>
-          <span className="text-[#E5C158]/40">•</span>
+          <span className="text-[#E5C158]/40 hidden sm:inline">•</span>
           <div className="flex items-center gap-2">
-            <Award className="w-4 h-4 text-[#E5C158]" />
-            <span className="font-bold text-[#F9F5EC]">40+ National Trackers</span>
+            <Award className="w-4 h-4 text-[#E5C158] shrink-0" />
+            <span className="font-bold text-[#F9F5EC] whitespace-nowrap">40+ National Trackers</span>
           </div>
-          <span className="text-[#E5C158]/40">•</span>
+          <span className="text-[#E5C158]/40 hidden sm:inline">•</span>
           <div className="flex items-center gap-2">
-            <ShieldCheck className="w-4 h-4 text-[#E5C158]" />
-            <span className="font-bold text-[#E5C158]">PRGI Accredited</span>
+            <ShieldCheck className="w-4 h-4 text-[#E5C158] shrink-0" />
+            <span className="font-bold text-[#E5C158] whitespace-nowrap">PRGI Accredited</span>
           </div>
         </div>
 

@@ -54,7 +54,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-header, section, footer, .bg-luxury-card {
+section, footer, .bg-luxury-card {
   transform: translateZ(0);
   backface-visibility: hidden;
 }
@@ -78,6 +78,15 @@ html.lenis body {
 
 .lenis.lenis-smooth iframe {
   pointer-events: none;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 /* Custom Scrollbar */
