@@ -113,7 +113,7 @@ export default function MagazineIssuesGrid({ issues }: MagazineIssuesGridProps) 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredIssues.map((issue, idx) => (
           <Reveal key={issue.id} delay={idx * 0.08}>
-            <MagazineIssueCard issue={issue} isFeatured={issue.isCurrentIssue && activeCategory === "ALL" && idx === 0} />
+            <MagazineIssueCard issue={issue} />
           </Reveal>
         ))}
       </div>

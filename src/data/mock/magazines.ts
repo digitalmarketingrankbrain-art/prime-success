@@ -4,7 +4,7 @@ export const magazinesData: MagazineIssue[] = [
   {
     "id": "issue-2026-07-02",
     "slug": "prime-success-magazine-2026-07-issue-02",
-    "issueNumber": "Vol. 26 · Issue 07-02",
+    "issueNumber": "Issue 07-02",
     "title": "PRIME SUCCESS · JULY 2026",
     "subtitle": "Official Fortnightly Print & Digital Release — 2nd Fortnightly Edition (2026)",
     "monthYear": "JULY 2026",
@@ -47,7 +47,7 @@ export const magazinesData: MagazineIssue[] = [
   {
     "id": "issue-2026-07-01",
     "slug": "prime-success-magazine-2026-07-issue-01",
-    "issueNumber": "Vol. 26 · Issue 07-01",
+    "issueNumber": "Issue 07-01",
     "title": "PRIME SUCCESS · JULY 2026",
     "subtitle": "Official Fortnightly Print & Digital Release — 1st Fortnightly Edition (2026)",
     "monthYear": "JULY 2026",
@@ -90,7 +90,7 @@ export const magazinesData: MagazineIssue[] = [
   {
     "id": "issue-2026-06-02",
     "slug": "prime-success-magazine-2026-06-issue-02",
-    "issueNumber": "Vol. 26 · Issue 06-02",
+    "issueNumber": "Issue 06-02",
     "title": "PRIME SUCCESS · JUNE 2026",
     "subtitle": "Official Fortnightly Print & Digital Release — 2nd Fortnightly Edition (2026)",
     "monthYear": "JUNE 2026",
@@ -133,7 +133,7 @@ export const magazinesData: MagazineIssue[] = [
   {
     "id": "issue-2026-06-01",
     "slug": "prime-success-magazine-2026-06-issue-01",
-    "issueNumber": "Vol. 26 · Issue 06-01",
+    "issueNumber": "Issue 06-01",
     "title": "PRIME SUCCESS · JUNE 2026",
     "subtitle": "Official Fortnightly Print & Digital Release — 1st Fortnightly Edition (2026)",
     "monthYear": "JUNE 2026",
@@ -176,7 +176,7 @@ export const magazinesData: MagazineIssue[] = [
   {
     "id": "issue-2026-05-01",
     "slug": "prime-success-magazine-2026-05-issue-01",
-    "issueNumber": "Vol. 26 · Issue 05-01",
+    "issueNumber": "Issue 05-01",
     "title": "PRIME SUCCESS · MAY 2026",
     "subtitle": "Official Fortnightly Print & Digital Release — 1st Fortnightly Edition (2026)",
     "monthYear": "MAY 2026",
@@ -219,7 +219,7 @@ export const magazinesData: MagazineIssue[] = [
   {
     "id": "issue-2026-04-02",
     "slug": "prime-success-magazine-2026-04-issue-02",
-    "issueNumber": "Vol. 26 · Issue 04-02",
+    "issueNumber": "Issue 04-02",
     "title": "PRIME SUCCESS · APRIL 2026",
     "subtitle": "Official Fortnightly Print & Digital Release — 2nd Fortnightly Edition (2026)",
     "monthYear": "APRIL 2026",
@@ -262,7 +262,7 @@ export const magazinesData: MagazineIssue[] = [
   {
     "id": "issue-2026-04-01",
     "slug": "prime-success-magazine-2026-04-issue-01",
-    "issueNumber": "Vol. 26 · Issue 04-01",
+    "issueNumber": "Issue 04-01",
     "title": "PRIME SUCCESS · APRIL 2026",
     "subtitle": "Official Fortnightly Print & Digital Release — 1st Fortnightly Edition (2026)",
     "monthYear": "APRIL 2026",
@@ -305,7 +305,7 @@ export const magazinesData: MagazineIssue[] = [
   {
     "id": "issue-2026-03-02",
     "slug": "prime-success-magazine-2026-03-issue-02",
-    "issueNumber": "Vol. 26 · Issue 03-02",
+    "issueNumber": "Issue 03-02",
     "title": "PRIME SUCCESS · MARCH 2026",
     "subtitle": "Official Fortnightly Print & Digital Release — 2nd Fortnightly Edition (2026)",
     "monthYear": "MARCH 2026",
@@ -348,7 +348,7 @@ export const magazinesData: MagazineIssue[] = [
   {
     "id": "issue-2026-03-01",
     "slug": "prime-success-magazine-2026-03-issue-01",
-    "issueNumber": "Vol. 26 · Issue 03-01",
+    "issueNumber": "Issue 03-01",
     "title": "PRIME SUCCESS · MARCH 2026",
     "subtitle": "Official Fortnightly Print & Digital Release — 1st Fortnightly Edition (2026)",
     "monthYear": "MARCH 2026",
@@ -391,7 +391,7 @@ export const magazinesData: MagazineIssue[] = [
   {
     "id": "issue-2026-02-02",
     "slug": "prime-success-magazine-2026-02-issue-02",
-    "issueNumber": "Vol. 26 · Issue 02-02",
+    "issueNumber": "Issue 02-02",
     "title": "PRIME SUCCESS · FEBRUARY 2026",
     "subtitle": "Official Fortnightly Print & Digital Release — 2nd Fortnightly Edition (2026)",
     "monthYear": "FEBRUARY 2026",
@@ -434,7 +434,7 @@ export const magazinesData: MagazineIssue[] = [
   {
     "id": "issue-2026-02-01",
     "slug": "prime-success-magazine-2026-02-issue-01",
-    "issueNumber": "Vol. 26 · Issue 02-01",
+    "issueNumber": "Issue 02-01",
     "title": "PRIME SUCCESS · FEBRUARY 2026",
     "subtitle": "Official Fortnightly Print & Digital Release — 1st Fortnightly Edition (2026)",
     "monthYear": "FEBRUARY 2026",
@@ -477,7 +477,7 @@ export const magazinesData: MagazineIssue[] = [
   {
     "id": "issue-2026-01-02",
     "slug": "prime-success-magazine-2026-01-issue-02",
-    "issueNumber": "Vol. 26 · Issue 01-02",
+    "issueNumber": "Issue 01-02",
     "title": "PRIME SUCCESS · JANUARY 2026",
     "subtitle": "Official Fortnightly Print & Digital Release — 2nd Fortnightly Edition (2026)",
     "monthYear": "JANUARY 2026",
@@ -520,7 +520,7 @@ export const magazinesData: MagazineIssue[] = [
   {
     "id": "issue-2026-01-01",
     "slug": "prime-success-magazine-2026-01-issue-01",
-    "issueNumber": "Vol. 26 · Issue 01-01",
+    "issueNumber": "Issue 01-01",
     "title": "PRIME SUCCESS · JANUARY 2026",
     "subtitle": "Official Fortnightly Print & Digital Release — 1st Fortnightly Edition (2026)",
     "monthYear": "JANUARY 2026",
@@ -563,7 +563,7 @@ export const magazinesData: MagazineIssue[] = [
   {
     "id": "issue-2025-11-01",
     "slug": "prime-success-magazine-2025-11-issue-01",
-    "issueNumber": "Vol. 25 · Issue 11-01",
+    "issueNumber": "Issue 11-01",
     "title": "PRIME SUCCESS · NOVEMBER 2025",
     "subtitle": "Official Fortnightly Print & Digital Release — 1st Fortnightly Edition (2025)",
     "monthYear": "NOVEMBER 2025",
@@ -606,7 +606,7 @@ export const magazinesData: MagazineIssue[] = [
   {
     "id": "issue-2025-10-02",
     "slug": "prime-success-magazine-2025-10-issue-02",
-    "issueNumber": "Vol. 25 · Issue 10-02",
+    "issueNumber": "Issue 10-02",
     "title": "PRIME SUCCESS · OCTOBER 2025",
     "subtitle": "Official Fortnightly Print & Digital Release — 2nd Fortnightly Edition (2025)",
     "monthYear": "OCTOBER 2025",
@@ -649,7 +649,7 @@ export const magazinesData: MagazineIssue[] = [
   {
     "id": "issue-2025-10-01",
     "slug": "prime-success-magazine-2025-10-issue-01",
-    "issueNumber": "Vol. 25 · Issue 10-01",
+    "issueNumber": "Issue 10-01",
     "title": "PRIME SUCCESS · OCTOBER 2025",
     "subtitle": "Official Fortnightly Print & Digital Release — 1st Fortnightly Edition (2025)",
     "monthYear": "OCTOBER 2025",
@@ -692,7 +692,7 @@ export const magazinesData: MagazineIssue[] = [
   {
     "id": "issue-2025-09-02",
     "slug": "prime-success-magazine-2025-09-issue-02",
-    "issueNumber": "Vol. 25 · Issue 09-02",
+    "issueNumber": "Issue 09-02",
     "title": "PRIME SUCCESS · SEPTEMBER 2025",
     "subtitle": "Official Fortnightly Print & Digital Release — 2nd Fortnightly Edition (2025)",
     "monthYear": "SEPTEMBER 2025",
@@ -735,7 +735,7 @@ export const magazinesData: MagazineIssue[] = [
   {
     "id": "issue-2025-09-01",
     "slug": "prime-success-magazine-2025-09-issue-01",
-    "issueNumber": "Vol. 25 · Issue 09-01",
+    "issueNumber": "Issue 09-01",
     "title": "PRIME SUCCESS · SEPTEMBER 2025",
     "subtitle": "Official Fortnightly Print & Digital Release — 1st Fortnightly Edition (2025)",
     "monthYear": "SEPTEMBER 2025",
@@ -778,7 +778,7 @@ export const magazinesData: MagazineIssue[] = [
   {
     "id": "issue-2025-08-02",
     "slug": "prime-success-magazine-2025-08-issue-02",
-    "issueNumber": "Vol. 25 · Issue 08-02",
+    "issueNumber": "Issue 08-02",
     "title": "PRIME SUCCESS · AUGUST 2025",
     "subtitle": "Official Fortnightly Print & Digital Release — 2nd Fortnightly Edition (2025)",
     "monthYear": "AUGUST 2025",
@@ -821,7 +821,7 @@ export const magazinesData: MagazineIssue[] = [
   {
     "id": "issue-2025-08-01",
     "slug": "prime-success-magazine-2025-08-issue-01",
-    "issueNumber": "Vol. 25 · Issue 08-01",
+    "issueNumber": "Issue 08-01",
     "title": "PRIME SUCCESS · AUGUST 2025",
     "subtitle": "Official Fortnightly Print & Digital Release — 1st Fortnightly Edition (2025)",
     "monthYear": "AUGUST 2025",
@@ -864,7 +864,7 @@ export const magazinesData: MagazineIssue[] = [
   {
     "id": "issue-2025-01-01",
     "slug": "prime-success-magazine-2025-01-issue-01",
-    "issueNumber": "Vol. 25 · Issue 01-01",
+    "issueNumber": "Issue 01-01",
     "title": "PRIME SUCCESS · JANUARY 2025",
     "subtitle": "Official Fortnightly Print & Digital Release — 1st Fortnightly Edition (2025)",
     "monthYear": "JANUARY 2025",

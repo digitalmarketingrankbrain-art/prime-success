@@ -8,26 +8,18 @@ import ImageReveal from "@/components/ui/ImageReveal";
 
 interface MagazineIssueCardProps {
   issue: MagazineIssue;
-  isFeatured?: boolean;
 }
 
-export default function MagazineIssueCard({ issue, isFeatured = false }: MagazineIssueCardProps) {
+export default function MagazineIssueCard({ issue }: MagazineIssueCardProps) {
   return (
-    <div
-      className={`group relative bg-luxury-card border border-royal-gold/30 hover:border-royal-gold transition-all duration-500 overflow-hidden flex flex-col justify-between shadow-xl hover:shadow-royal-gold/15 ${
-        isFeatured ? "md:col-span-2 md:flex-row" : ""
-      }`}
-    >
+    <div className="group relative bg-luxury-card border border-royal-gold/30 hover:border-royal-gold transition-all duration-500 overflow-hidden flex flex-col justify-between shadow-xl hover:shadow-royal-gold/15">
       {/* Cover Image Container */}
-      <div
-        className={`relative overflow-hidden bg-luxury-dark ${
-          isFeatured ? "md:w-1/2 min-h-[380px]" : "w-full aspect-[3/4]"
-        }`}
-      >
+      <div className="relative overflow-hidden bg-luxury-dark w-full aspect-[3/4]">
         <ImageReveal
           src={issue.coverImage}
           alt={`Prime Success Magazine Cover - ${issue.title} (${issue.monthYear})`}
-          aspectRatio={isFeatured ? "aspect-[4/3] md:aspect-[3/4]" : "aspect-[3/4]"}
+          aspectRatio="aspect-[3/4]"
+          objectFit="contain"
         />
 
         {/* Magazine Cover Framing Overlay */}
@@ -59,11 +51,7 @@ export default function MagazineIssueCard({ issue, isFeatured = false }: Magazin
       </div>
 
       {/* Magazine Info Details */}
-      <div
-        className={`p-6 sm:p-8 flex flex-col justify-between ${
-          isFeatured ? "md:w-1/2" : "w-full flex-1"
-        }`}
-      >
+      <div className="p-6 sm:p-8 flex flex-col justify-between w-full flex-1">
         <div className="flex flex-col gap-3">
           {/* Header Metadata */}
           <div className="flex items-center justify-between border-b border-royal-gold/20 pb-3 text-xs font-sans">

@@ -21,6 +21,7 @@ interface ImageRevealProps {
   className?: string;
   containerClassName?: string;
   aspectRatio?: string;
+  objectFit?: "cover" | "contain";
 }
 
 export default function ImageReveal({
@@ -33,6 +34,7 @@ export default function ImageReveal({
   className,
   containerClassName,
   aspectRatio = "aspect-[4/5]",
+  objectFit = "cover",
 }: ImageRevealProps) {
   const [imageError, setImageError] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -41,7 +43,7 @@ export default function ImageReveal({
   useEffect(() => {
     const container = containerRef.current;
     const img = imageRef.current;
-    if (!container || !img) return;
+    if (!container || !img || objectFit === "contain") return;
 
     const ctx = gsap.context(() => {
       // Scale reveal & vertical parallax effect
@@ -63,7 +65,7 @@ export default function ImageReveal({
     }, container);
 
     return () => ctx.revert();
-  }, []);
+  }, [objectFit]);
 
   return (
     <div
@@ -97,7 +99,8 @@ export default function ImageReveal({
             priority={priority}
             onError={() => setImageError(true)}
             className={cn(
-              "object-cover w-full h-full transition-transform duration-700 group-hover:scale-105",
+              objectFit === "contain" ? "object-contain" : "object-cover",
+              "w-full h-full transition-transform duration-700 group-hover:scale-105",
               className
             )}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

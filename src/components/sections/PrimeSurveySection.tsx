@@ -10,8 +10,7 @@ interface PollOption {
   rank: number;
   name: string;
   title: string;
-  percentage: number;
-  votes: string;
+  votes: number;
   color: string;
 }
 
@@ -19,49 +18,46 @@ const POLL_OPTIONS: PollOption[] = [
   {
     id: 0,
     rank: 1,
-    name: "Shri Yogi Adityanath",
+    name: "Mr. Yogi Adityanath",
     title: "Chief Minister, Uttar Pradesh",
-    percentage: 38,
-    votes: "3,196 votes",
+    votes: 11887,
     color: "from-[#FFF1B0] via-[#E5C158] to-[#B38E22]",
   },
   {
     id: 1,
     rank: 2,
-    name: "Rekha Gupta",
-    title: "Political Leader & Administrator",
-    percentage: 22,
-    votes: "1,850 votes",
+    name: "Mr. Pushkar Singh Dhami",
+    title: "Chief Minister, Uttarakhand",
+    votes: 9877,
     color: "from-[#F4E296] via-[#D4AF37] to-[#85640D]",
   },
   {
     id: 2,
     rank: 3,
-    name: "Shri Pushkar Singh Dhami",
-    title: "Chief Minister, Uttarakhand",
-    percentage: 18,
-    votes: "1,514 votes",
+    name: "Mr. Nayab Singh Saini",
+    title: "Chief Minister, Haryana",
+    votes: 8764,
     color: "from-[#E5C158] to-[#997A15]",
   },
   {
     id: 3,
     rank: 4,
-    name: "Shri Nayab Singh Saini",
-    title: "Chief Minister, Haryana",
-    percentage: 13,
-    votes: "1,093 votes",
+    name: "Mr. Devendra Fadnavis",
+    title: "Chief Minister, Maharashtra",
+    votes: 7864,
     color: "from-[#D4AF37] to-[#7A5B0B]",
   },
   {
     id: 4,
     rank: 5,
-    name: "Mohan Yadav",
-    title: "Chief Minister, Madhya Pradesh",
-    percentage: 9,
-    votes: "757 votes",
+    name: "Mr. N. Chandrababu Naidu",
+    title: "Chief Minister, Andhra Pradesh",
+    votes: 7658,
     color: "from-[#C5A028] to-[#563F05]",
   },
 ];
+
+const BASE_TOTAL_VOTES = POLL_OPTIONS.reduce((sum, opt) => sum + opt.votes, 0);
 
 export default function PrimeSurveySection() {
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
@@ -71,6 +67,8 @@ export default function PrimeSurveySection() {
     setSelectedOption(id);
     setHasVoted(true);
   };
+
+  const currentTotalVotes = hasVoted ? BASE_TOTAL_VOTES + 1 : BASE_TOTAL_VOTES;
 
   return (
     <section className="py-24 bg-luxury-black text-ivory relative border-b border-royal-gold/25 overflow-hidden bg-noise">
@@ -94,7 +92,7 @@ export default function PrimeSurveySection() {
               <div className="flex items-center gap-2.5">
                 <BrandCrown className="w-5 h-5" />
                 <span className="text-xs font-sans font-bold text-[#E5C158] uppercase tracking-[0.2em]">
-                  8,412 VERIFIED READER VOTES
+                  {currentTotalVotes.toLocaleString('en-US')} VERIFIED READER VOTES
                 </span>
               </div>
               <span className="px-3 py-1 bg-[#6B0E16] border border-[#E5C158]/40 text-[#F9F5EC] text-[10px] font-sans font-bold uppercase tracking-widest rounded-md shadow-md flex items-center gap-1.5">
@@ -107,7 +105,8 @@ export default function PrimeSurveySection() {
             <div className="flex flex-col gap-4">
               {POLL_OPTIONS.map((opt) => {
                 const isSelected = selectedOption === opt.id;
-                const displayPercent = hasVoted && isSelected ? opt.percentage + 1 : opt.percentage;
+                const currentVotes = hasVoted && isSelected ? opt.votes + 1 : opt.votes;
+                const displayPercent = Math.round((currentVotes / currentTotalVotes) * 100);
 
                 return (
                   <div
@@ -157,7 +156,7 @@ export default function PrimeSurveySection() {
                             {displayPercent}%
                           </span>
                           <span className="text-[10px] font-sans text-[#E8DCC4]/60">
-                            {opt.votes}
+                            {currentVotes.toLocaleString('en-US')} votes
                           </span>
                         </div>
                       </div>

@@ -81,12 +81,12 @@ export default function ShortNewsSection() {
                   <span className={`px-2.5 py-1 text-[10px] font-sans font-bold uppercase tracking-widest border rounded-md ${item.color}`}>
                     {item.category}
                   </span>
-                  <span className="text-[11px] font-sans text-cream/60 flex items-center gap-1">
+                  <span className="text-[11px] font-sans text-[#E8DCC4]/60 flex items-center gap-1">
                     <Calendar className="w-3 h-3 text-royal-gold" />
                     <span>{item.date}</span>
                   </span>
                 </div>
-                <h4 className="font-serif text-base font-bold text-ivory group-hover:text-royal-gold transition-colors leading-snug">
+                <h4 className="font-serif text-base font-bold text-[#F9F5EC] group-hover:text-[#E5C158] transition-colors leading-snug">
                   {item.title}
                 </h4>
               </div>
@@ -114,7 +114,7 @@ export default function ShortNewsSection() {
               </div>
               <button
                 onClick={() => setActiveModalItem(null)}
-                className="p-1.5 text-cream/70 hover:text-[#E5C158] transition-colors cursor-pointer"
+                className="p-1.5 text-[#E8DCC4]/70 hover:text-[#E5C158] transition-colors cursor-pointer"
                 aria-label="Close modal"
               >
                 <X className="w-6 h-6" />

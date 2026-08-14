@@ -14,7 +14,7 @@ export default function ContactSocialGrid() {
           className="p-3 bg-luxury-dark border border-royal-gold/20 hover:border-royal-gold text-ivory flex flex-col gap-1 transition-colors group"
         >
           <span className="text-[10px] text-royal-gold font-bold uppercase tracking-wider">Instagram</span>
-          <span className="font-semibold text-cream group-hover:text-gold-gradient">@prime___success</span>
+          <span className="font-semibold text-cream group-hover:text-gold-gradient break-all">@prime___success</span>
         </a>
         <a
           href="https://www.facebook.com/people/prime-success/61554412108481/"

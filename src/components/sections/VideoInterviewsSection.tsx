@@ -42,7 +42,7 @@ export default function VideoInterviewsSection() {
               className={`px-4 py-2 text-xs font-sans font-bold tracking-widest uppercase transition-all duration-300 rounded-md cursor-pointer ${
                 activeCategory === cat
                   ? "bg-[#6B0E16] text-[#F9F5EC] border border-[#E5C158] shadow-lg shadow-[#6B0E16]/30"
-                  : "bg-[#120E09]/80 text-cream/80 border border-royal-gold/20 hover:border-royal-gold/60 hover:text-ivory"
+                  : "bg-[#120E09]/80 text-[#E8DCC4]/80 border border-royal-gold/20 hover:border-royal-gold/60 hover:text-[#F9F5EC]"
               }`}
             >
               {cat}
@@ -76,16 +76,16 @@ export default function VideoInterviewsSection() {
                     <span className="px-2.5 py-1 bg-[#6B0E16]/40 border border-[#E5C158]/40 text-[#E5C158] text-[10px] font-sans font-bold uppercase tracking-widest rounded-md">
                       {video.category}
                     </span>
-                    <span className="text-[11px] font-sans text-cream/60 font-mono">
+                    <span className="text-[11px] font-sans text-[#E8DCC4]/60 font-mono">
                       {video.duration}
                     </span>
                   </div>
-                  <h4 className="font-serif text-lg font-bold text-ivory group-hover:text-royal-gold transition-colors leading-snug">
+                  <h4 className="font-serif text-lg font-bold text-[#F9F5EC] group-hover:text-[#E5C158] transition-colors leading-snug">
                     {video.title}
                   </h4>
                 </div>
 
-                <div className="pt-3 border-t border-royal-gold/15 flex items-center justify-between text-xs font-sans text-cream/70">
+                <div className="pt-3 border-t border-royal-gold/15 flex items-center justify-between text-xs font-sans text-[#E8DCC4]/70">
                   <span className="flex items-center gap-1.5 text-royal-gold font-semibold">
                     <Video className="w-3.5 h-3.5 text-royal-gold" />
                     <span>Broadcast 0{idx + 1}</span>

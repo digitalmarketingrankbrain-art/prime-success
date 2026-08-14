@@ -108,13 +108,13 @@ export default function ViksitBharatSection() {
                   </div>
 
                   <div className="flex flex-col gap-1 flex-grow">
-                    <h4 className="font-serif text-lg font-bold text-ivory flex items-center gap-2">
+                    <h4 className="font-serif text-lg font-bold text-[#F9F5EC] flex items-center gap-2">
                       {step.title}
                       {isActive && (
                         <CheckCircle2 className="w-4 h-4 text-[#E5C158] flex-shrink-0" />
                       )}
                     </h4>
-                    <p className="font-sans text-xs text-cream/80 font-light leading-relaxed">
+                    <p className="font-sans text-xs text-[#E8DCC4]/80 font-light leading-relaxed">
                       {step.desc}
                     </p>
                   </div>

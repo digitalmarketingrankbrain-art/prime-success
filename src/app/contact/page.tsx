@@ -2,7 +2,6 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import ContactHeadquarters from "@/components/contact/ContactHeadquarters";
 import ContactSocialGrid from "@/components/contact/ContactSocialGrid";
 import ContactInquiryForm from "@/components/contact/ContactInquiryForm";
-import ContactPaymentNotice from "@/components/contact/ContactPaymentNotice";
 import ContactOfficeMaps from "@/components/contact/ContactOfficeMaps";
 
 export default function ContactPage() {
@@ -34,7 +33,6 @@ export default function ContactPage() {
           {/* Right Column: ADVERTISE WITH US / SEND AN INQUIRY FORM */}
           <div className="lg:col-span-7 flex flex-col gap-8">
             <ContactInquiryForm />
-            <ContactPaymentNotice />
           </div>
         </div>
 

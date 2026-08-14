@@ -5,300 +5,310 @@ export const surveysData: SurveyPoll[] = [
     id: "poll-01",
     title: "Most Prime Success Leader of Europe",
     category: "GLOBAL LEADERSHIP",
-    totalVotes: 155833,
+    totalVotes: 1866000,
     options: [
-      { id: "opt-1", label: "Giorgia Meloni (Italy, Prime Minister)", votes: 89726 },
-      { id: "opt-2", label: "Keir Starmer (United Kingdom, Prime Minister)", votes: 28333 },
-      { id: "opt-3", label: "Friedrich Merz (Germany, Chancellor)", votes: 18203 },
-      { id: "opt-4", label: "Pedro Sánchez (Spain, Prime Minister)", votes: 16289 },
-      { id: "opt-5", label: "Emmanuel Macron (France, President)", votes: 3282 }
+      { id: "opt-1", label: "Mrs. Giorgia Meloni (Italy, Prime Minister)", votes: 1074411 },
+      { id: "opt-2", label: "Mr. Keir Starmer (United Kingdom, Prime Minister)", votes: 339269 },
+      { id: "opt-3", label: "Mr. Friedrich Merz (Germany, Chancellor)", votes: 217969 },
+      { id: "opt-4", label: "Mr. Pedro Sánchez (Spain, Prime Minister)", votes: 195050 },
+      { id: "opt-5", label: "Mr. Emmanuel Macron (France, President)", votes: 39301 }
     ]
   },
   {
     id: "poll-02",
     title: "Most Prime Success Leader of Southern African",
     category: "AFRICA & EUROPE",
-    totalVotes: 82800,
+    totalVotes: 1019300,
     options: [
-      { id: "opt-1", label: "Cyril Ramaphosa (South Africa, President)", votes: 31200 },
-      { id: "opt-2", label: "Emmerson Mnangagwa (Zimbabwe, President)", votes: 22400 },
-      { id: "opt-3", label: "Duma Boko (Botswana, President)", votes: 15800 },
-      { id: "opt-4", label: "Netumbo Nandi-Ndaitwah (Namibia, President)", votes: 9100 },
-      { id: "opt-5", label: "Hakainde Hichilema (Zambia, President)", votes: 4300 }
+      { id: "opt-1", label: "Mr. Cyril Ramaphosa (South Africa, President)", votes: 384084 },
+      { id: "opt-2", label: "Mr. Emmerson Mnangagwa (Zimbabwe, President)", votes: 275753 },
+      { id: "opt-3", label: "Mr. Duma Boko (Botswana, President)", votes: 194504 },
+      { id: "opt-4", label: "Mrs. Netumbo Nandi-Ndaitwah (Namibia, President)", votes: 112025 },
+      { id: "opt-5", label: "Mr. Hakainde Hichilema (Zambia, President)", votes: 52934 }
     ]
   },
   {
     id: "poll-03",
     title: "Most Prime Success Leader of North Africa",
     category: "AFRICA & EUROPE",
-    totalVotes: 74900,
+    totalVotes: 94170,
     options: [
-      { id: "opt-1", label: "Abdel Fattah el-Sisi (Egypt, President)", votes: 28900 },
-      { id: "opt-2", label: "Abdelmadjid Tebboune (Algeria, President)", votes: 19800 },
-      { id: "opt-3", label: "Kais Saied (Tunisia, President)", votes: 14200 },
-      { id: "opt-4", label: "Aziz Akhannouch (Morocco, Prime Minister)", votes: 8100 },
-      { id: "opt-5", label: "Mohamed al-Menfi (Libya, Chairman of Presidential Council)", votes: 3900 }
+      { id: "opt-1", label: "Mr. Abdel Fattah el-Sisi (Egypt, President)", votes: 72829 },
+      { id: "opt-2", label: "Mr. Aziz Akhannouch (Morocco, Prime Minister)", votes: 9272 },
+      { id: "opt-3", label: "Mr. Abdelmadjid Tebboune (Algeria, President)", votes: 8261 },
+      { id: "opt-4", label: "Mr. Mohamed al-Menfi (Libya, Chairman of Presidential Council)", votes: 2536 },
+      { id: "opt-5", label: "Mr. Kais Saied (Tunisia, President)", votes: 1272 }
     ]
   },
   {
     id: "poll-04",
     title: "Most Prime Success Leader of  East Africa",
     category: "AFRICA & EUROPE",
-    totalVotes: 98500,
+    totalVotes: 1139452,
     options: [
-      { id: "opt-1", label: "Abiy Ahmed (Ethiopia, Prime Minister)", votes: 35600 },
-      { id: "opt-2", label: "William Ruto (Kenya, President)", votes: 24100 },
-      { id: "opt-3", label: "Yoweri Museveni (Uganda, President)", votes: 18300 },
-      { id: "opt-4", label: "Samia Suluhu Hassan (Tanzania, President)", votes: 11200 },
-      { id: "opt-5", label: "Paul Kagame (Rwanda, President)", votes: 6400 },
-      { id: "opt-6", label: "Hassan Sheikh Mohamud (Somalia, President)", votes: 2900 }
-    ]
-  },
-  {
-    id: "poll-05",
-    title: "Best Private Commerce College in Delhi/NCR 2026?",
-    category: "ACADEMICS & COLLEGES",
-    totalVotes: 53000,
-    options: [
-      { id: "opt-1", label: "Amity University, Noida", votes: 19800 },
-      { id: "opt-2", label: "BML Munjal University, Gurgaon", votes: 14200 },
-      { id: "opt-3", label: "Kasturi Ram College of Higher Education", votes: 9500 },
-      { id: "opt-4", label: "Amity University, Gurgaon", votes: 6100 },
-      { id: "opt-5", label: "Sharda University, Greater Noida", votes: 3400 }
-    ]
-  },
-  {
-    id: "poll-06",
-    title: "Best Private MBA College in Delhi/NCR 2026?",
-    category: "EXCELLENCE & HOSPITALITY",
-    totalVotes: 119500,
-    options: [
-      { id: "opt-1", label: "Management Development Institute", votes: 42100 },
-      { id: "opt-2", label: "Amity University, Noida", votes: 31500 },
-      { id: "opt-3", label: "International Management Institute, New Delhi", votes: 22800 },
-      { id: "opt-4", label: "IMT Ghaziabad", votes: 14900 },
-      { id: "opt-5", label: "BIMTECH, Greater Noida", votes: 8200 }
+      { id: "opt-1", label: "Mr. Abiy Ahmed (Ethiopia, Prime Minister)", votes: 1054357 },
+      { id: "opt-2", label: "Mrs. Samia Suluhu Hassan (Tanzania, President)", votes: 24553 },
+      { id: "opt-3", label: "Mr. Hassan Sheikh Mohamud (Somalia, President)", votes: 23765 },
+      { id: "opt-4", label: "Mr. William Ruto (Kenya, President)", votes: 18685 },
+      { id: "opt-5", label: "Mr. Yoweri Museveni (Uganda, President)", votes: 12657 },
+      { id: "opt-6", label: "Mr. Paul Kagame (Rwanda, President)", votes: 5435 }
     ]
   },
   {
     id: "poll-07",
     title: "Best Five Star Hotel in Delhi?",
     category: "EXCELLENCE & HOSPITALITY",
-    totalVotes: 70800,
+    totalVotes: 1623700,
     options: [
-      { id: "opt-1", label: "ITC Maurya, Chanakayapuri", votes: 27400 },
-      { id: "opt-2", label: "Shangri-La Eros, Connaught Place", votes: 18900 },
-      { id: "opt-3", label: "The Leela Palace, Chanakayapuri", votes: 12600 },
-      { id: "opt-4", label: "Taj Mahal, New Delhi", votes: 7800 },
-      { id: "opt-5", label: "The Lalit, New Delhi", votes: 4100 }
+      { id: "opt-1", label: "ITC Maurya, Chanakayapuri", votes: 628381 },
+      { id: "opt-2", label: "Shangri-La Eros, Connaught Place", votes: 433445 },
+      { id: "opt-3", label: "The Leela Palace, Chanakayapuri", votes: 288964 },
+      { id: "opt-4", label: "Taj Mahal, New Delhi", votes: 178882 },
+      { id: "opt-5", label: "The Lalit, New Delhi", votes: 94028 }
     ]
   },
   {
     id: "poll-08",
     title: "On a Scale of 1 to 5, how satisfied are you with PM Modi's Performance?",
     category: "GOVERNANCE & POLICY",
-    totalVotes: 135000,
+    totalVotes: 1540300,
     options: [
-      { id: "opt-1", label: "5", votes: 52800 },
-      { id: "opt-2", label: "4", votes: 38400 },
-      { id: "opt-3", label: "3", votes: 24100 },
-      { id: "opt-4", label: "2", votes: 12900 },
-      { id: "opt-5", label: "1", votes: 6800 }
+      { id: "opt-1", label: "5", votes: 602428 },
+      { id: "opt-2", label: "4", votes: 438130 },
+      { id: "opt-3", label: "3", votes: 274972 },
+      { id: "opt-4", label: "2", votes: 147184 },
+      { id: "opt-5", label: "1", votes: 77586 }
     ]
   },
   {
     id: "poll-09",
     title: "Which Political Party is Best in Decision Making?",
     category: "GOVERNANCE & POLICY",
-    totalVotes: 83900,
+    totalVotes: 1325000,
     options: [
-      { id: "opt-1", label: "Bharatiya Janata Party", votes: 33400 },
-      { id: "opt-2", label: "Communist Party of India", votes: 21900 },
-      { id: "opt-3", label: "Indian National Congress", votes: 14800 },
-      { id: "opt-4", label: "Aam Aadmi Party", votes: 9200 },
-      { id: "opt-5", label: "Bahujan Samaj Party", votes: 4600 }
+      { id: "opt-1", label: "Bharatiya Janata Party", votes: 527473 },
+      { id: "opt-2", label: "Communist Party of India", votes: 345858 },
+      { id: "opt-3", label: "Indian National Congress", votes: 233731 },
+      { id: "opt-4", label: "Aam Aadmi Party", votes: 145292 },
+      { id: "opt-5", label: "Bahujan Samaj Party", votes: 72646 }
     ]
   },
   {
     id: "poll-10",
     title: "Which Political Party is doing Best work in Agriculture Sector?",
     category: "GOVERNANCE & POLICY",
-    totalVotes: 71800,
+    totalVotes: 1107400,
     options: [
-      { id: "opt-1", label: "Bharatiya Janata Party", votes: 29100 },
-      { id: "opt-2", label: "Communist Party of India", votes: 18700 },
-      { id: "opt-3", label: "Indian National Congress", votes: 12300 },
-      { id: "opt-4", label: "Aam Aadmi Party", votes: 7900 },
-      { id: "opt-5", label: "Bahujan Samaj Party", votes: 3800 }
+      { id: "opt-1", label: "Bharatiya Janata Party", votes: 448821 },
+      { id: "opt-2", label: "Communist Party of India", votes: 288418 },
+      { id: "opt-3", label: "Indian National Congress", votes: 189708 },
+      { id: "opt-4", label: "Aam Aadmi Party", votes: 121845 },
+      { id: "opt-5", label: "Bahujan Samaj Party", votes: 58608 }
     ]
   },
   {
     id: "poll-11",
     title: "Which Political Party is doing Best work in Infrastructure Sector?",
     category: "GOVERNANCE & POLICY",
-    totalVotes: 69400,
+    totalVotes: 1814500,
     options: [
-      { id: "opt-1", label: "Bharatiya Janata Party", votes: 24500 },
-      { id: "opt-2", label: "Communist Party of India", votes: 18200 },
-      { id: "opt-3", label: "Indian National Congress", votes: 12400 },
-      { id: "opt-4", label: "Aam Aadmi Party", votes: 8900 },
-      { id: "opt-5", label: "Bahujan Samaj Party", votes: 5400 }
+      { id: "opt-1", label: "Bharatiya Janata Party", votes: 640566 },
+      { id: "opt-2", label: "Communist Party of India", votes: 475849 },
+      { id: "opt-3", label: "Indian National Congress", votes: 324205 },
+      { id: "opt-4", label: "Aam Aadmi Party", votes: 232695 },
+      { id: "opt-5", label: "Bahujan Samaj Party", votes: 141185 }
     ]
   },
   {
     id: "poll-12",
     title: "Which Political Party is doing Best work in Healthcare Sector?",
     category: "GOVERNANCE & POLICY",
-    totalVotes: 82800,
+    totalVotes: 1852400,
     options: [
-      { id: "opt-1", label: "Bharatiya Janata Party", votes: 31200 },
-      { id: "opt-2", label: "Communist Party of India", votes: 22400 },
-      { id: "opt-3", label: "Indian National Congress", votes: 15800 },
-      { id: "opt-4", label: "Aam Aadmi Party", votes: 9100 },
-      { id: "opt-5", label: "Bahujan Samaj Party", votes: 4300 }
+      { id: "opt-1", label: "Bharatiya Janata Party", votes: 698006 },
+      { id: "opt-2", label: "Communist Party of India", votes: 501132 },
+      { id: "opt-3", label: "Indian National Congress", votes: 353477 },
+      { id: "opt-4", label: "Aam Aadmi Party", votes: 203585 },
+      { id: "opt-5", label: "Bahujan Samaj Party", votes: 96200 }
     ]
   },
   {
     id: "poll-13",
     title: "Which Political Party is doing Best work in Economic Sector?",
     category: "GOVERNANCE & POLICY",
-    totalVotes: 74900,
+    totalVotes: 1176900,
     options: [
-      { id: "opt-1", label: "Bharatiya Janata Party", votes: 28900 },
-      { id: "opt-2", label: "Communist Party of India", votes: 19800 },
-      { id: "opt-3", label: "Indian National Congress", votes: 14200 },
-      { id: "opt-4", label: "Aam Aadmi Party", votes: 8100 },
-      { id: "opt-5", label: "Bahujan Samaj Party", votes: 3900 }
-    ]
-  },
-  {
-    id: "poll-14",
-    title: "Best Private Engineer College in Delhi/NCR 2026?",
-    category: "GOVERNANCE & POLICY",
-    totalVotes: 95600,
-    options: [
-      { id: "opt-1", label: "Amity University, Noida", votes: 35600 },
-      { id: "opt-2", label: "Galgotias University", votes: 24100 },
-      { id: "opt-3", label: "Manav Rachna International Institute", votes: 18300 },
-      { id: "opt-4", label: "Jaypee Institute of IT", votes: 11200 },
-      { id: "opt-5", label: "G.L. Bajaj Institute of Technology", votes: 6400 }
+      { id: "opt-1", label: "Bharatiya Janata Party", votes: 454104 },
+      { id: "opt-2", label: "Communist Party of India", votes: 311116 },
+      { id: "opt-3", label: "Indian National Congress", votes: 223124 },
+      { id: "opt-4", label: "Aam Aadmi Party", votes: 127275 },
+      { id: "opt-5", label: "Bahujan Samaj Party", votes: 61281 }
     ]
   },
   {
     id: "poll-15",
     title: "Which State Government Provides Best Education?",
     category: "GOVERNANCE & POLICY",
-    totalVotes: 53000,
+    totalVotes: 1222700,
     options: [
-      { id: "opt-1", label: "Delhi", votes: 19800 },
-      { id: "opt-2", label: "Uttar Pradesh", votes: 14200 },
-      { id: "opt-3", label: "Maharashtra", votes: 9500 },
-      { id: "opt-4", label: "Tamil Nadu", votes: 6100 },
-      { id: "opt-5", label: "Bihar", votes: 3400 }
+      { id: "opt-1", label: "Delhi", votes: 456782 },
+      { id: "opt-2", label: "Uttar Pradesh", votes: 327591 },
+      { id: "opt-3", label: "Maharashtra", votes: 219163 },
+      { id: "opt-4", label: "Tamil Nadu", votes: 140726 },
+      { id: "opt-5", label: "Bihar", votes: 78438 }
     ]
   },
   {
     id: "poll-16",
     title: "Which is the Most Emerging Bank in 2026?",
     category: "GOVERNANCE & POLICY",
-    totalVotes: 119500,
+    totalVotes: 1766600,
     options: [
-      { id: "opt-1", label: "HDFC Bank", votes: 42100 },
-      { id: "opt-2", label: "AU Small Finance Bank", votes: 31500 },
-      { id: "opt-3", label: "Axis Bank", votes: 22800 },
-      { id: "opt-4", label: "Kotak Mahindra Bank", votes: 14900 },
-      { id: "opt-5", label: "YES BANK", votes: 8200 }
+      { id: "opt-1", label: "HDFC Bank", votes: 622375 },
+      { id: "opt-2", label: "AU Small Finance Bank", votes: 465673 },
+      { id: "opt-3", label: "Axis Bank", votes: 337058 },
+      { id: "opt-4", label: "Kotak Mahindra Bank", votes: 220271 },
+      { id: "opt-5", label: "YES BANK", votes: 121223 }
     ]
   },
   {
     id: "poll-17",
     title: "Which State Police is best in India?",
     category: "GOVERNANCE & POLICY",
-    totalVotes: 70800,
+    totalVotes: 1211500,
     options: [
-      { id: "opt-1", label: "Delhi Police", votes: 27400 },
-      { id: "opt-2", label: "UP Police", votes: 18900 },
-      { id: "opt-3", label: "Maharashtra Police", votes: 12600 },
-      { id: "opt-4", label: "Kerala Police", votes: 7800 },
-      { id: "opt-5", label: "Punjab Police", votes: 4100 }
+      { id: "opt-1", label: "Delhi Police", votes: 468857 },
+      { id: "opt-2", label: "UP Police", votes: 323409 },
+      { id: "opt-3", label: "Maharashtra Police", votes: 215606 },
+      { id: "opt-4", label: "Kerala Police", votes: 133470 },
+      { id: "opt-5", label: "Punjab Police", votes: 70158 }
     ]
   },
   {
     id: "poll-18",
     title: "Who is the Best Lt. Governor?",
     category: "WORLD & LEADERSHIP",
-    totalVotes: 135000,
+    totalVotes: 1566100,
     options: [
-      { id: "opt-1", label: "Shri D. K. Joshi", votes: 52800 },
-      { id: "opt-2", label: "Shri Vinai Saxena", votes: 38400 },
-      { id: "opt-3", label: "Shri Manoj Sinha", votes: 24100 },
-      { id: "opt-4", label: "K. Kailashnathan", votes: 12900 },
-      { id: "opt-5", label: "Shri B.D. Mishra", votes: 6800 }
+      { id: "opt-1", label: "Mr. D. K. Joshi", votes: 612519 },
+      { id: "opt-2", label: "Mr. Vinai Saxena", votes: 445468 },
+      { id: "opt-3", label: "Mr. Manoj Sinha", votes: 279578 },
+      { id: "opt-4", label: "Mr. K. Kailashnathan", votes: 149650 },
+      { id: "opt-5", label: "Mr. B.D. Mishra", votes: 78885 }
     ]
   },
   {
     id: "poll-19",
     title: "Who is best news channel in India?",
     category: "WORLD & LEADERSHIP",
-    totalVotes: 83900,
+    totalVotes: 1842800,
     options: [
-      { id: "opt-1", label: "Aaj tak", votes: 33400 },
-      { id: "opt-2", label: "DD News", votes: 21900 },
-      { id: "opt-3", label: "India today", votes: 14800 },
-      { id: "opt-4", label: "Republic tv", votes: 9200 },
-      { id: "opt-5", label: "NDTV India", votes: 4600 }
+      { id: "opt-1", label: "Aaj tak", votes: 733606 },
+      { id: "opt-2", label: "DD News", votes: 481017 },
+      { id: "opt-3", label: "India today", votes: 325071 },
+      { id: "opt-4", label: "Republic tv", votes: 202071 },
+      { id: "opt-5", label: "NDTV India", votes: 101035 }
     ]
   },
   {
     id: "poll-20",
     title: "Who is the best leader in World?",
     category: "WORLD & LEADERSHIP",
-    totalVotes: 71800,
+    totalVotes: 1602900,
     options: [
-      { id: "opt-1", label: "PM Shri Narendra Modi - India", votes: 29100 },
-      { id: "opt-2", label: "President Joe Biden - USA", votes: 18700 },
-      { id: "opt-3", label: "PM Rishi Sunak - UK", votes: 12300 },
-      { id: "opt-4", label: "PM Justin Trudeau - Canada", votes: 7900 },
-      { id: "opt-5", label: "PM Giorgia Meloni - Italy", votes: 3800 }
+      { id: "opt-1", label: "PM Mr. Narendra Modi - India", votes: 649643 },
+      { id: "opt-2", label: "President Mr. Joe Biden - USA", votes: 417468 },
+      { id: "opt-3", label: "PM Mr. Rishi Sunak - UK", votes: 274592 },
+      { id: "opt-4", label: "PM Mr. Justin Trudeau - Canada", votes: 176364 },
+      { id: "opt-5", label: "PM Mrs. Giorgia Meloni - Italy", votes: 84833 }
     ]
   },
   {
     id: "poll-21",
     title: "Who is the best cabinet Minsiter?",
     category: "WORLD & LEADERSHIP",
-    totalVotes: 69400,
+    totalVotes: 1080100,
     options: [
-      { id: "opt-1", label: "Shri Raj Nath Singh", votes: 24500 },
-      { id: "opt-2", label: "Shri Amit Shah", votes: 18200 },
-      { id: "opt-3", label: "Shri Nitin Gadkari", votes: 12400 },
-      { id: "opt-4", label: "Smt. Nirmala Sitaraman", votes: 8900 },
-      { id: "opt-5", label: "Shri Piyush Goyal", votes: 5400 }
+      { id: "opt-1", label: "Mr. Raj Nath Singh", votes: 381303 },
+      { id: "opt-2", label: "Mr. Amit Shah", votes: 283254 },
+      { id: "opt-3", label: "Mr. Nitin Gadkari", votes: 192986 },
+      { id: "opt-4", label: "Mrs. Nirmala Sitaraman", votes: 138514 },
+      { id: "opt-5", label: "Mr. Piyush Goyal", votes: 84043 }
     ]
   },
   {
     id: "poll-22",
     title: "Who is the Best Chief Minister in India?",
     category: "WORLD & LEADERSHIP",
-    totalVotes: 82800,
+    totalVotes: 46050,
     options: [
-      { id: "opt-1", label: "Shri Yogi Adityanath", votes: 31200 },
-      { id: "opt-2", label: "Shri Nayab Singh Saini", votes: 22400 },
-      { id: "opt-3", label: "Shri Pushkar Singh Dhami", votes: 15800 },
-      { id: "opt-4", label: "Devendra Fadnavis", votes: 9100 },
-      { id: "opt-5", label: "N. Chandrababu Naidu", votes: 4300 }
+      { id: "opt-1", label: "Mr. Yogi Adityanath", votes: 11887 },
+      { id: "opt-2", label: "Mr. Pushkar Singh Dhami", votes: 9877 },
+      { id: "opt-3", label: "Mr. Nayab Singh Saini", votes: 8764 },
+      { id: "opt-4", label: "Mr. Devendra Fadnavis", votes: 7864 },
+      { id: "opt-5", label: "Mr. N. Chandrababu Naidu", votes: 7658 }
     ]
   },
   {
     id: "poll-23",
     title: "Who will be the Ruling Party of Delhi in 2030?",
     category: "WORLD & LEADERSHIP",
-    totalVotes: 74900,
+    totalVotes: 1182600,
     options: [
-      { id: "opt-1", label: "Bharatiya Janata Party", votes: 28900 },
-      { id: "opt-2", label: "Bahujan Samaj Party", votes: 19800 },
-      { id: "opt-3", label: "Communist Party of India", votes: 14200 },
-      { id: "opt-4", label: "Indian National Congress", votes: 8100 },
-      { id: "opt-5", label: "Nationalist Congress Party", votes: 3900 }
+      { id: "opt-1", label: "Bharatiya Janata Party", votes: 456304 },
+      { id: "opt-2", label: "Bahujan Samaj Party", votes: 312623 },
+      { id: "opt-3", label: "Communist Party of India", votes: 224205 },
+      { id: "opt-4", label: "Indian National Congress", votes: 127891 },
+      { id: "opt-5", label: "Nationalist Congress Party", votes: 61577 }
+    ]
+  },
+  {
+    id: "poll-24",
+    title: "Best Small Finance Bank in India 2026?",
+    category: "GOVERNANCE & POLICY",
+    totalVotes: 1940280,
+    options: [
+      { id: "opt-1", label: "AU Small Finance Bank", votes: 704820 },
+      { id: "opt-2", label: "Capital Small Finance Bank", votes: 402150 },
+      { id: "opt-3", label: "Equitas Small Finance Bank", votes: 248930 },
+      { id: "opt-4", label: "ESAF Small Finance Bank", votes: 183460 },
+      { id: "opt-5", label: "Jana Small Finance Bank", votes: 127380 },
+      { id: "opt-6", label: "North East Small Finance Bank", votes: 88940 },
+      { id: "opt-7", label: "Shivalik Small Finance Bank", votes: 61570 },
+      { id: "opt-8", label: "Suryoday Small Finance Bank", votes: 44280 },
+      { id: "opt-9", label: "Ujjivan Small Finance Bank", votes: 36150 },
+      { id: "opt-10", label: "Unity Small Finance Bank", votes: 24680 },
+      { id: "opt-11", label: "Utkarsh Small Finance Bank", votes: 17920 }
+    ]
+  },
+  {
+    id: "poll-25",
+    title: "Prime Success Prime Minister of South Asia Countries",
+    category: "WORLD & LEADERSHIP",
+    totalVotes: 1738400,
+    options: [
+      { id: "opt-1", label: "Mr. Narendra Modi (India, Prime Minister)", votes: 686668 },
+      { id: "opt-2", label: "Mr. Shehbaz Sharif (Pakistan, Prime Minister)", votes: 321604 },
+      { id: "opt-3", label: "Mr. Tarique Rahman (Bangladesh, Prime Minister)", votes: 217300 },
+      { id: "opt-4", label: "Mr. Balendra Shah (Nepal, Prime Minister)", votes: 165148 },
+      { id: "opt-5", label: "Mr. Tshering Tobgay (Bhutan, Prime Minister)", votes: 130380 },
+      { id: "opt-6", label: "Dr. Harini Amarasuriya (Sri Lanka, Prime Minister)", votes: 100827 },
+      { id: "opt-7", label: "Dr. Mohamed Muizzu (Maldives, President — no Prime Minister)", votes: 73013 },
+      { id: "opt-8", label: "Mr. Mohammad Hassan Akhund (Afghanistan, Acting Prime Minister)", votes: 43460 }
+    ]
+  },
+  {
+    id: "poll-26",
+    title: "Prime Success Prime Minister of East Asia Countries",
+    category: "WORLD & LEADERSHIP",
+    totalVotes: 1562800,
+    options: [
+      { id: "opt-1", label: "Mr. Li Qiang (China, Premier of the State Council)", votes: 531352 },
+      { id: "opt-2", label: "Mrs. Sanae Takaichi (Japan, Prime Minister)", votes: 382886 },
+      { id: "opt-3", label: "Mr. Kim Min-seok (South Korea, Prime Minister)", votes: 273490 },
+      { id: "opt-4", label: "Mr. Cho Jung-tai (Taiwan, Premier)", votes: 195350 },
+      { id: "opt-5", label: "Mr. Gombojav Zandanshatar (Mongolia, Prime Minister)", votes: 109396 },
+      { id: "opt-6", label: "Mr. Pak Thae-song (North Korea, Premier)", votes: 70326 }
     ]
   }
 ];
