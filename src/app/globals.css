@@ -1,26 +1,255 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --font-cinzel: "Cinzel", serif;
+    --font-playfair: "Playfair Display", serif;
+    --font-jakarta: "Plus Jakarta Sans", sans-serif;
+
+    /* Default Dark Mode CSS Variables */
+    --bg-black: #080604;
+    --bg-dark: #0F0C08;
+    --bg-card: #16120B;
+    --text-ivory: #F9F5EC;
+    --text-cream: #E8DCC4;
+    --border-gold: rgba(229, 193, 88, 0.3);
+    --gold-primary: #E5C158;
+    --gold-dark: #B38E22;
+  }
+
+  /* Ultra-Luxurious High-Contrast Royal Light Mode */
+  html.light {
+    --bg-black: #F7F4EE;
+    --bg-dark: #EFE9DC;
+    --bg-card: #FFFFFF;
+    --text-ivory: #140E06;
+    --text-cream: #3A2E1C;
+    --border-gold: rgba(122, 91, 11, 0.35);
+    --gold-primary: #7A5B0B;
+    --gold-dark: #563F05;
+    --surface-shadow: rgba(35, 25, 5, 0.08);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@theme {
+  --color-royal-red: #6B0E16;
+  --color-royal-red-dark: #32060B;
+  --color-royal-gold: var(--gold-primary);
+  --color-royal-gold-light: #F4E296;
+  --color-royal-gold-dark: var(--gold-dark);
+  --color-luxury-black: var(--bg-black);
+  --color-luxury-dark: var(--bg-dark);
+  --color-luxury-card: var(--bg-card);
+  --color-ivory: var(--text-ivory);
+  --color-cream: var(--text-cream);
+
+  --font-serif-royal: var(--font-cinzel), serif;
+  --font-serif-editorial: var(--font-playfair), serif;
+  --font-sans: var(--font-jakarta), sans-serif;
+}
+
+/* Hardware Acceleration & Fast Scroll Rendering Optimizations */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header, section, footer, .bg-luxury-card {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold-dark);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-primary);
+}
+
+/* Smooth Marquee Keyframes */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: inline-flex;
+  animation: marquee 35s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Gold Gradient Utilities */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFF1B0 0%, #E5C158 45%, #B38E22 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html.light .text-gold-gradient {
+  background: linear-gradient(135deg, #7A5B0B 0%, #4A3704 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Preserve bright metallic gold gradient when over dark brand sections in Light Mode */
+html.light #hero-section .text-gold-gradient,
+html.light #trophy-showcase-section .text-gold-gradient,
+html.light [class*="bg-[#32060B]"] .text-gold-gradient,
+html.light [class*="bg-[#6B0E16]"] .text-gold-gradient,
+html.light footer .text-gold-gradient {
+  background: linear-gradient(135deg, #FFF1B0 0%, #E5C158 50%, #B38E22 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.border-gold-gradient {
+  border-image: linear-gradient(to right, #E5C158, #F4E296, #B38E22) 1;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #F4E296 0%, #E5C158 50%, #B38E22 100%);
+}
+
+.bg-royal-gradient {
+  background: linear-gradient(180deg, #32060B 0%, var(--bg-black) 100%);
+}
+
+.bg-gold-glow {
+  background: radial-gradient(circle, rgba(229, 193, 88, 0.12) 0%, rgba(8, 6, 4, 0) 70%);
+}
+
+/* Gold Noise overlay utility */
+.bg-noise {
+  background-image: radial-gradient(rgba(179, 142, 34, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Light Mode Card & Container System */
+html.light .bg-luxury-card {
+  background-color: #FFFFFF !important;
+  box-shadow: 0 8px 30px -6px rgba(35, 25, 5, 0.07), 0 0 1px rgba(122, 91, 11, 0.35);
+}
+
+html.light .bg-luxury-dark {
+  background-color: #EFE9DC !important;
+  border-color: rgba(122, 91, 11, 0.3) !important;
+}
+
+html.light .shadow-luxury-black,
+html.light .shadow-xl,
+html.light .shadow-2xl {
+  --tw-shadow-color: var(--surface-shadow) !important;
+  --tw-shadow: var(--tw-shadow-colored) !important;
+}
+
+html.light .bg-black\/40,
+html.light .bg-luxury-black\/60,
+html.light .bg-luxury-black\/80,
+html.light .bg-luxury-black\/85 {
+  background-color: rgba(247, 244, 238, 0.74) !important;
+}
+
+/* Light Mode Form Control Contrast */
+html.light input:not(footer input),
+html.light select:not(footer select),
+html.light textarea:not(footer textarea) {
+  background-color: #FFFFFF !important;
+  color: #140E06 !important;
+  border-color: rgba(122, 91, 11, 0.4) !important;
+}
+
+html.light input:not(footer input):focus,
+html.light select:not(footer select):focus,
+html.light textarea:not(footer textarea):focus {
+  border-color: #7A5B0B !important;
+  box-shadow: 0 0 0 2px rgba(122, 91, 11, 0.25) !important;
+  outline: none !important;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: #5E4E3A !important;
+  opacity: 1 !important;
+}
+
+html.light select option {
+  background-color: #FFFFFF !important;
+  color: #140E06 !important;
+}
+
+/* Light Mode Header System */
+html.light header {
+  background-color: rgba(247, 244, 238, 0.96) !important;
+  border-bottom-color: rgba(122, 91, 11, 0.3) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+}
+
+html.light header span.text-ivory {
+  color: #140E06 !important;
+}
+
+html.light header span.text-royal-gold {
+  color: #7A5B0B !important;
+}
+
+html.light header nav a {
+  color: #3A2E1C !important;
+}
+
+html.light header nav a:hover {
+  color: #7A5B0B !important;
+}
+
+html.light header nav a.text-royal-gold {
+  color: #7A5B0B !important;
+}
+
+html.light header nav a span.bg-royal-gold {
+  background-color: #7A5B0B !important;
+}
+
+html.light header button {
+  color: #140E06 !important;
+}
+
+/* Light Mode Typography Adjustments */
+html.light body {
+  color: #140E06;
+  background-color: #F7F4EE;
 }

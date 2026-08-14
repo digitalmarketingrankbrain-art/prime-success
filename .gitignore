@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# large magazine PDFs (host externally, not in git)
+/public/magazines
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
