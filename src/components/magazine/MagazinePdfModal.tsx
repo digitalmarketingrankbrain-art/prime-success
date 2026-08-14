@@ -82,7 +82,7 @@ export default function MagazinePdfModal({ issue, onClose }: Props) {
       <div className="flex-grow relative overflow-hidden bg-black/80 flex items-center justify-center p-4 sm:p-8">
         {readerMode === "PDF" ? (
           <iframe
-            src={issue.pdfUrl.replace("/view", "/preview")}
+            src={issue.pdfUrl?.replace("/view", "/preview")}
             title={`PDF Reader for ${issue.title}`}
             className="w-full h-full max-w-5xl border border-royal-gold/30 shadow-2xl bg-white"
           />
