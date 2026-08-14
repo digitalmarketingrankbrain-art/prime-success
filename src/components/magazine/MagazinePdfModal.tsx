@@ -103,30 +103,34 @@ export default function MagazinePdfModal({ issue, onClose }: Props) {
         )}
       </div>
 
-      {/* Reader Bottom Pagination Bar */}
-      <div className="h-14 border-t border-royal-gold/20 px-6 flex items-center justify-between bg-luxury-dark text-xs font-sans text-cream/80">
-        <button
-          onClick={prevPage}
-          disabled={currentPage === 1}
-          className="flex items-center gap-1 hover:text-royal-gold disabled:opacity-30 disabled:hover:text-cream/80 cursor-pointer"
-        >
-          <ChevronLeft className="w-4 h-4" />
-          <span>PREVIOUS PAGE</span>
-        </button>
+      {/* Reader Bottom Pagination Bar — only meaningful in SUMMARY SPREAD mode.
+          REAL PDF VIEW embeds Google Drive's own viewer, which has its own page
+          controls and exposes no way for this page to drive its position. */}
+      {readerMode === "SPREAD" && (
+        <div className="h-14 border-t border-royal-gold/20 px-6 flex items-center justify-between bg-luxury-dark text-xs font-sans text-cream/80">
+          <button
+            onClick={prevPage}
+            disabled={currentPage === 1}
+            className="flex items-center gap-1 hover:text-royal-gold disabled:opacity-30 disabled:hover:text-cream/80 cursor-pointer"
+          >
+            <ChevronLeft className="w-4 h-4" />
+            <span>PREVIOUS PAGE</span>
+          </button>
 
-        <span className="font-mono text-royal-gold">
-          PAGE {currentPage} / {issue.pagesCount}
-        </span>
+          <span className="font-mono text-royal-gold">
+            PAGE {currentPage} / {issue.pagesCount}
+          </span>
 
-        <button
-          onClick={nextPage}
-          disabled={currentPage === issue.pagesCount}
-          className="flex items-center gap-1 hover:text-royal-gold disabled:opacity-30 disabled:hover:text-cream/80 cursor-pointer"
-        >
-          <span>NEXT PAGE</span>
-          <ChevronRight className="w-4 h-4" />
-        </button>
-      </div>
+          <button
+            onClick={nextPage}
+            disabled={currentPage === issue.pagesCount}
+            className="flex items-center gap-1 hover:text-royal-gold disabled:opacity-30 disabled:hover:text-cream/80 cursor-pointer"
+          >
+            <span>NEXT PAGE</span>
+            <ChevronRight className="w-4 h-4" />
+          </button>
+        </div>
+      )}
     </div>
   );
 }
