@@ -2,7 +2,7 @@ import Image from "next/image";
 
 interface BrandCrownProps {
   className?: string;
-  variant?: "with-shadow" | "shadow" | "logo";
+  variant?: "with-shadow" | "shadow" | "logo" | "icon";
   alt?: string;
 }
 
@@ -16,6 +16,8 @@ export default function BrandCrown({
       ? "/images/crown-shadow.png"
       : variant === "logo"
       ? "/images/prime-success-logo.png"
+      : variant === "icon"
+      ? "/icon.png"
       : "/images/crown-with-shadow.png";
 
   return (

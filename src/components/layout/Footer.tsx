@@ -17,7 +17,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-4 group">
               <div className="relative w-14 h-14 md:w-16 md:h-16 flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
                 <Image
-                  src="/images/prime-success-logo.png"
+                  src="/icon.png"
                   alt="Prime Success Media Logo"
                   fill
                   className="object-contain"

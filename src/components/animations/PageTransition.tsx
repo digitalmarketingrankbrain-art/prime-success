@@ -80,7 +80,7 @@ export function PageTransitionProvider({ children }: { children: React.ReactNode
         <div className="flex flex-col items-center gap-4">
           <div ref={crownRef} className="opacity-0 flex flex-col items-center gap-2">
             <div className="w-16 h-16 rounded-full border-2 border-[#E5C158] bg-[#6B0E16]/40 flex items-center justify-center shadow-lg shadow-[#E5C158]/30 overflow-hidden p-2">
-              <BrandCrown className="w-10 h-10" variant="with-shadow" />
+              <BrandCrown className="w-10 h-10" variant="icon" />
             </div>
             <span className="font-serif text-lg tracking-[0.3em] font-bold text-[#F9F5EC] mt-2">
               PRIME SUCCESS
