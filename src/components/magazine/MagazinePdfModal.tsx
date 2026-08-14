@@ -59,7 +59,8 @@ export default function MagazinePdfModal({ issue, onClose }: Props) {
           {/* Download Link */}
           <a
             href={issue.pdfUrl}
-            download
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-1.5 px-3 py-1.5 bg-royal-gold/15 text-royal-gold hover:bg-royal-gold hover:text-luxury-black border border-royal-gold text-[10px] font-bold tracking-wider uppercase transition-colors"
           >
             <Download className="w-3.5 h-3.5" />
@@ -81,7 +82,7 @@ export default function MagazinePdfModal({ issue, onClose }: Props) {
       <div className="flex-grow relative overflow-hidden bg-black/80 flex items-center justify-center p-4 sm:p-8">
         {readerMode === "PDF" ? (
           <iframe
-            src={`${issue.pdfUrl}#page=${currentPage}`}
+            src={issue.pdfUrl.replace("/view", "/preview")}
             title={`PDF Reader for ${issue.title}`}
             className="w-full h-full max-w-5xl border border-royal-gold/30 shadow-2xl bg-white"
           />
