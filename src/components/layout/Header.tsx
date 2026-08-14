@@ -138,7 +138,7 @@ export default function Header() {
     {/* Mobile Menu Overlay (rendered outside <header> so it isn't clipped to the
         header's own containing block when the header has a transform/backdrop-filter) */}
     {mobileMenuOpen && (
-      <div className="fixed inset-0 top-[75px] bg-[#080604]/98 backdrop-blur-2xl z-50 flex flex-col px-8 py-10 lg:hidden border-t border-royal-gold/25 animate-fadeIn">
+      <div className="fixed inset-0 top-[75px] bg-[#080604]/98 backdrop-blur-2xl z-50 flex flex-col px-8 py-10 lg:hidden border-t border-[#E5C158]/25 animate-fadeIn">
         <nav className="flex flex-col gap-6 mb-10">
           {NAV_LINKS.map((link) => {
             const isActive = pathname === link.href;
@@ -148,12 +148,12 @@ export default function Header() {
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
                 className={cn(
-                  "font-serif text-2xl tracking-[0.15em] border-b border-royal-gold/20 pb-3 flex items-center justify-between cursor-pointer transition-colors",
-                  isActive ? "text-royal-gold font-bold" : "text-ivory hover:text-royal-gold"
+                  "font-serif text-2xl tracking-[0.15em] border-b border-[#E5C158]/20 pb-3 flex items-center justify-between cursor-pointer transition-colors",
+                  isActive ? "text-[#E5C158] font-bold" : "text-[#F9F5EC] hover:text-[#E5C158]"
                 )}
               >
                 <span>{link.name}</span>
-                <ChevronRight className="w-5 h-5 text-royal-gold" />
+                <ChevronRight className="w-5 h-5 text-[#E5C158]" />
               </a>
             );
           })}
@@ -161,7 +161,7 @@ export default function Header() {
         <a
           href="/nominate"
           onClick={(e) => handleNavClick(e, "/nominate")}
-          className="w-full py-4 bg-[#6B0E16] border border-royal-gold text-center text-[#F9F5EC] font-bold text-xs tracking-[0.2em] uppercase cursor-pointer shadow-lg"
+          className="w-full py-4 bg-[#6B0E16] border border-[#E5C158] text-center text-[#F9F5EC] font-bold text-xs tracking-[0.2em] uppercase cursor-pointer shadow-lg"
         >
           NOMINATE A LEADER
         </a>
