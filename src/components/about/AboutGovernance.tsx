@@ -9,7 +9,7 @@ export default function AboutGovernance() {
         <div className="flex items-center gap-3 justify-center sm:justify-start">
           <ShieldCheck className="w-8 h-8 text-royal-gold" />
           <h3 className="font-serif text-2xl sm:text-3xl font-bold">
-            PRGI ACCREDITATION & EDITORIAL ETHICS
+            PRGI Registered & EDITORIAL ETHICS
           </h3>
         </div>
         <p className="font-sans text-xs sm:text-sm text-[#E8DCC4] leading-relaxed font-light">

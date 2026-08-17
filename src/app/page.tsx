@@ -7,7 +7,6 @@ import VideoInterviewsSection from "@/components/sections/VideoInterviewsSection
 import ViksitBharatSection from "@/components/sections/ViksitBharatSection";
 import ShortNewsSection from "@/components/sections/ShortNewsSection";
 import AwardCategoriesSection from "@/components/sections/AwardCategoriesSection";
-import TrophyShowcase from "@/components/sections/TrophyShowcase";
 import PatronageSection from "@/components/sections/PatronageSection";
 import NominationCTA from "@/components/sections/NominationCTA";
 import SiteUpdateNotice from "@/components/sections/SiteUpdateNotice";
@@ -57,11 +56,6 @@ export default function HomePage() {
       {/* SECTION 08: SHORT NEWS BRIEFS */}
       <ErrorBoundary sectionName="Editorial Briefs">
         <ShortNewsSection />
-      </ErrorBoundary>
-
-      {/* SECTION 09: 3D ROTATING TROPHY MONUMENT SHOWCASE */}
-      <ErrorBoundary sectionName="Trophy Monument Showcase">
-        <TrophyShowcase />
       </ErrorBoundary>
 
       {/* SECTION 10: AWARD CATEGORIES */}

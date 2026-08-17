@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { useState } from "react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import GoldDivider from "@/components/ui/GoldDivider";
 import { usePageTransition } from "@/components/animations/PageTransition";
 
@@ -26,10 +27,18 @@ function FacebookIcon({ className }: { className?: string }) {
 
 export default function Footer() {
   const { navigateTo } = usePageTransition();
+  const [email, setEmail] = useState("");
+  const [subscribed, setSubscribed] = useState(false);
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     navigateTo(href);
+  };
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email.trim()) return;
+    setSubscribed(true);
   };
 
   return (
@@ -106,7 +115,6 @@ export default function Footer() {
             <ul className="flex flex-col gap-2 font-sans text-xs tracking-wider text-cream">
               <li><Link href="/about" onClick={(e) => handleNavClick(e, "/about")} className="hover:text-royal-gold transition-colors">About Us</Link></li>
               <li><Link href="/awards" className="hover:text-royal-gold transition-colors">The Awards</Link></li>
-              <li><Link href="/winners" className="hover:text-royal-gold transition-colors">Honoured Winners</Link></li>
               <li><Link href="/careers" onClick={(e) => handleNavClick(e, "/careers")} className="hover:text-royal-gold transition-colors">Careers</Link></li>
             </ul>
           </div>
@@ -117,9 +125,7 @@ export default function Footer() {
               MAGAZINE
             </h4>
             <ul className="flex flex-col gap-2 font-sans text-xs tracking-wider text-cream">
-              <li><Link href="/magazine" className="hover:text-royal-gold transition-colors">Cover Stories</Link></li>
-              <li><Link href="/magazine" className="hover:text-royal-gold transition-colors">Leadership</Link></li>
-              <li><Link href="/magazine" className="hover:text-royal-gold transition-colors">Innovation</Link></li>
+              <li><Link href="/magazine" className="hover:text-royal-gold transition-colors">Magazine</Link></li>
               <li><Link href="/nominate" className="hover:text-royal-gold transition-colors">Submit Nomination</Link></li>
               <li><Link href="/contact" className="hover:text-royal-gold transition-colors">Press Concierge</Link></li>
             </ul>
@@ -133,22 +139,30 @@ export default function Footer() {
             <p className="font-sans text-xs text-cream/80 leading-relaxed font-light">
               Receive private invitations and editorial dispatches from the Hall of Prime.
             </p>
-            <form onSubmit={(e) => e.preventDefault()} className="flex flex-col gap-2 mt-1">
-              <div className="relative">
+            {subscribed ? (
+              <div className="flex items-center gap-2 mt-1 text-xs text-royal-gold font-sans font-semibold">
+                <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
+                <span>Subscribed! Watch your inbox.</span>
+              </div>
+            ) : (
+              <form onSubmit={handleSubscribe} className="flex flex-col gap-2 mt-1">
                 <input
                   type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
                   placeholder="Enter your email address"
                   className="w-full bg-luxury-card border border-royal-gold/40 px-4 py-2 text-xs text-ivory placeholder:text-cream/50 focus:outline-none focus:border-royal-gold focus:ring-1 focus:ring-royal-gold/50 transition-all rounded-none"
                 />
                 <button
                   type="submit"
-                  className="absolute right-2 top-1/2 -translate-y-1/2 text-royal-gold p-1.5 hover:text-ivory transition-colors cursor-pointer"
-                  aria-label="Subscribe to Dispatches"
+                  className="w-full flex items-center justify-center gap-2 bg-royal-gold text-luxury-black px-4 py-2 text-xs font-sans font-bold uppercase tracking-widest hover:bg-royal-gold-light transition-colors cursor-pointer"
                 >
-                  <ArrowUpRight className="w-4 h-4" />
+                  <span>Subscribe</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
                 </button>
-              </div>
-            </form>
+              </form>
+            )}
           </div>
         </div>
 
