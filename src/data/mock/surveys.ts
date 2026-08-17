@@ -6,7 +6,7 @@ export const surveysData: SurveyPoll[] = [
     title: "Most Prime Success Leader of Europe",
     category: "GLOBAL LEADERSHIP",
     totalVotes: 1866000,
-    status: "closed",
+    status: "live",
     options: [
       { id: "opt-1", label: "Mr. Emmanuel Macron (France, President)", votes: 1074411 },
       { id: "opt-2", label: "Mr. Friedrich Merz (Germany, Chancellor)", votes: 339269 },
@@ -276,7 +276,7 @@ export const surveysData: SurveyPoll[] = [
     title: "Best Small Finance Bank in India 2026?",
     category: "GOVERNANCE & POLICY",
     totalVotes: 1940280,
-    status: "live",
+    status: "closed",
     options: [
       { id: "opt-1", label: "AU Small Finance Bank", votes: 704820 },
       { id: "opt-2", label: "Capital Small Finance Bank", votes: 402150 },

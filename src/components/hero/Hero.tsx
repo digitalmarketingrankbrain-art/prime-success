@@ -182,7 +182,7 @@ export default function Hero() {
         </span>
         <Eye className="w-3.5 h-3.5 text-[#E5C158] flex-shrink-0" />
         <span className="text-xs font-sans font-semibold text-[#F9F5EC] whitespace-nowrap">
-          1.2+ Cr visited
+          20 Million+ visited
         </span>
       </div>
 

@@ -12,7 +12,6 @@ import ThemeToggle from "@/components/ui/ThemeToggle";
 const NAV_LINKS = [
   { name: "SURVEYS", href: "/surveys" },
   { name: "AWARDS", href: "/awards" },
-  { name: "WINNERS", href: "/winners" },
   { name: "INTERVIEWS", href: "/interviews" },
   { name: "MAGAZINE", href: "/magazine" },
   { name: "CONTACT", href: "/contact" },

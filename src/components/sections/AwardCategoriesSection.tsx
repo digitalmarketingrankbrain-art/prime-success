@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { ArrowUpRight, Crown, ShieldCheck, Zap, HeartHandshake, Palette, TrendingUp, Award, Sparkles } from "lucide-react";
+import { Crown, ShieldCheck, Zap, HeartHandshake, Palette, TrendingUp, Award, Sparkles } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Reveal from "@/components/animations/Reveal";
 import { AwardCategory } from "@/types";
@@ -34,10 +33,7 @@ export default function AwardCategoriesSection({ categories }: AwardCategoriesSe
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {categories.map((cat, idx) => (
             <Reveal key={cat.id} delay={idx * 0.1}>
-              <Link
-                href={`/categories`}
-                className="group block p-8 bg-luxury-card border border-royal-gold/30 hover:border-royal-gold transition-all duration-500 relative overflow-hidden h-full flex flex-col justify-between shadow-lg shadow-luxury-black hover:shadow-royal-gold/10 hover:-translate-y-1"
-              >
+              <div className="group p-8 bg-luxury-card border border-royal-gold/30 hover:border-royal-gold transition-all duration-500 relative overflow-hidden h-full flex flex-col justify-between shadow-lg shadow-luxury-black">
                 <div className="absolute top-0 right-0 p-4 opacity-15 font-serif text-5xl text-royal-gold font-bold group-hover:opacity-30 transition-opacity">
                   {cat.number}
                 </div>
@@ -58,11 +54,10 @@ export default function AwardCategoriesSection({ categories }: AwardCategoriesSe
                   </p>
                 </div>
 
-                <div className="mt-8 pt-4 border-t border-royal-gold/20 flex items-center justify-between text-xs text-royal-gold font-sans font-bold tracking-wider group-hover:text-royal-gold-light">
-                  <span>EXPLORE CRITERIA</span>
-                  <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <div className="mt-8 pt-4 border-t border-royal-gold/20 text-xs text-royal-gold font-sans font-bold tracking-wider">
+                  <span>PRIME SUCCESS DISTINCTION</span>
                 </div>
-              </Link>
+              </div>
             </Reveal>
           ))}
         </div>

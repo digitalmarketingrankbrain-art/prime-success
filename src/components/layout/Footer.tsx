@@ -101,7 +101,6 @@ export default function Footer() {
               <li><Link href="/about" className="hover:text-royal-gold transition-colors">About Us</Link></li>
               <li><Link href="/awards" className="hover:text-royal-gold transition-colors">The Awards</Link></li>
               <li><Link href="/winners" className="hover:text-royal-gold transition-colors">Honoured Winners</Link></li>
-              <li><Link href="/categories" className="hover:text-royal-gold transition-colors">Categories</Link></li>
             </ul>
           </div>
 
