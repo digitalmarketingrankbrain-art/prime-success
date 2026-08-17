@@ -7,11 +7,11 @@ export const surveysData: SurveyPoll[] = [
     category: "GLOBAL LEADERSHIP",
     totalVotes: 1866000,
     options: [
-      { id: "opt-1", label: "Mrs. Giorgia Meloni (Italy, Prime Minister)", votes: 1074411 },
-      { id: "opt-2", label: "Mr. Keir Starmer (United Kingdom, Prime Minister)", votes: 339269 },
-      { id: "opt-3", label: "Mr. Friedrich Merz (Germany, Chancellor)", votes: 217969 },
-      { id: "opt-4", label: "Mr. Pedro Sánchez (Spain, Prime Minister)", votes: 195050 },
-      { id: "opt-5", label: "Mr. Emmanuel Macron (France, President)", votes: 39301 }
+      { id: "opt-1", label: "Mr. Emmanuel Macron (France, President)", votes: 1074411 },
+      { id: "opt-2", label: "Mr. Friedrich Merz (Germany, Chancellor)", votes: 339269 },
+      { id: "opt-3", label: "Mrs. Giorgia Meloni (Italy, Prime Minister)", votes: 217969 },
+      { id: "opt-4", label: "Mr. Andy Burnham (United Kingdom, Prime Minister)", votes: 195050 },
+      { id: "opt-5", label: "Mr. Volodymyr Zelenskyy (Ukraine, President)", votes: 39301 }
     ]
   },
   {
@@ -186,15 +186,15 @@ export const surveysData: SurveyPoll[] = [
   },
   {
     id: "poll-18",
-    title: "Who is the Best Lt. Governor?",
+    title: "Who is the Best Lieutenant Governor in India?",
     category: "WORLD & LEADERSHIP",
     totalVotes: 1566100,
     options: [
-      { id: "opt-1", label: "Mr. D. K. Joshi", votes: 612519 },
-      { id: "opt-2", label: "Mr. Vinai Saxena", votes: 445468 },
-      { id: "opt-3", label: "Mr. Manoj Sinha", votes: 279578 },
-      { id: "opt-4", label: "Mr. K. Kailashnathan", votes: 149650 },
-      { id: "opt-5", label: "Mr. B.D. Mishra", votes: 78885 }
+      { id: "opt-1", label: "Mr. Taranjit Singh Sandhu (Delhi, Lt. Governor)", votes: 612519 },
+      { id: "opt-2", label: "Mr. Manoj Sinha (Jammu & Kashmir, Lt. Governor)", votes: 445468 },
+      { id: "opt-3", label: "Mr. Vinai Kumar Saxena (Ladakh, Lt. Governor)", votes: 279578 },
+      { id: "opt-4", label: "Mr. K. Kailashnathan (Puducherry, Lt. Governor)", votes: 149650 },
+      { id: "opt-5", label: "Admiral D. K. Joshi (Andaman & Nicobar Islands, Lt. Governor)", votes: 78885 }
     ]
   },
   {
@@ -217,10 +217,10 @@ export const surveysData: SurveyPoll[] = [
     totalVotes: 1602900,
     options: [
       { id: "opt-1", label: "PM Mr. Narendra Modi - India", votes: 649643 },
-      { id: "opt-2", label: "President Mr. Joe Biden - USA", votes: 417468 },
-      { id: "opt-3", label: "PM Mr. Rishi Sunak - UK", votes: 274592 },
-      { id: "opt-4", label: "PM Mr. Justin Trudeau - Canada", votes: 176364 },
-      { id: "opt-5", label: "PM Mrs. Giorgia Meloni - Italy", votes: 84833 }
+      { id: "opt-2", label: "President Mr. Donald Trump - USA", votes: 417468 },
+      { id: "opt-3", label: "President Mr. Xi Jinping - China", votes: 274592 },
+      { id: "opt-4", label: "President Mr. Luiz Inácio Lula da Silva - Brazil", votes: 176364 },
+      { id: "opt-5", label: "President Mr. Emmanuel Macron - France", votes: 84833 }
     ]
   },
   {
@@ -301,14 +301,13 @@ export const surveysData: SurveyPoll[] = [
     id: "poll-26",
     title: "Prime Success Prime Minister of East Asia Countries",
     category: "WORLD & LEADERSHIP",
-    totalVotes: 1562800,
+    totalVotes: 1367450,
     options: [
       { id: "opt-1", label: "Mr. Li Qiang (China, Premier of the State Council)", votes: 531352 },
       { id: "opt-2", label: "Mrs. Sanae Takaichi (Japan, Prime Minister)", votes: 382886 },
-      { id: "opt-3", label: "Mr. Kim Min-seok (South Korea, Prime Minister)", votes: 273490 },
-      { id: "opt-4", label: "Mr. Cho Jung-tai (Taiwan, Premier)", votes: 195350 },
-      { id: "opt-5", label: "Mr. Gombojav Zandanshatar (Mongolia, Prime Minister)", votes: 109396 },
-      { id: "opt-6", label: "Mr. Pak Thae-song (North Korea, Premier)", votes: 70326 }
+      { id: "opt-3", label: "Mrs. Han Seongsook (South Korea, Prime Minister)", votes: 273490 },
+      { id: "opt-4", label: "Mr. Nyam-Osor Uchral (Mongolia, Prime Minister)", votes: 109396 },
+      { id: "opt-5", label: "Mr. Pak Thae-song (North Korea, Premier)", votes: 70326 }
     ]
   }
 ];

@@ -8,12 +8,11 @@ import ViksitBharatSection from "@/components/sections/ViksitBharatSection";
 import ShortNewsSection from "@/components/sections/ShortNewsSection";
 import AwardCategoriesSection from "@/components/sections/AwardCategoriesSection";
 import TrophyShowcase from "@/components/sections/TrophyShowcase";
-import EventSection from "@/components/sections/EventSection";
 import PatronageSection from "@/components/sections/PatronageSection";
 import NominationCTA from "@/components/sections/NominationCTA";
 import SiteUpdateNotice from "@/components/sections/SiteUpdateNotice";
 import ErrorBoundary from "@/components/ui/ErrorBoundary";
-import { articlesData, awardsData, galaEventData } from "@/data/mockData";
+import { articlesData, awardsData } from "@/data/mockData";
 
 export default function HomePage() {
   const coverStory = articlesData.find((a) => a.isCoverStory) || articlesData[0];
@@ -73,11 +72,6 @@ export default function HomePage() {
       {/* SECTION 11: GLOBAL PATRONAGE & INSTITUTIONAL ALLIANCES */}
       <ErrorBoundary sectionName="Patronage Grid">
         <PatronageSection />
-      </ErrorBoundary>
-
-      {/* SECTION 12: UPCOMING GRAND GALA EVENT */}
-      <ErrorBoundary sectionName="Grand Gala Spotlight">
-        <EventSection event={galaEventData} />
       </ErrorBoundary>
 
       {/* SECTION 13: NOMINATION CTA */}

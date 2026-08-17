@@ -4,7 +4,7 @@ import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDown, Sparkles, ShieldCheck, BookOpen, Award } from "lucide-react";
+import { ArrowDown, Sparkles, ShieldCheck, BookOpen, Award, Eye } from "lucide-react";
 import { usePageTransition } from "@/components/animations/PageTransition";
 import BrandCrown from "@/components/ui/BrandCrown";
 
@@ -172,6 +172,18 @@ export default function Hero() {
           </div>
         </div>
 
+      </div>
+
+      {/* Live Visitor Count Badge */}
+      <div className="absolute bottom-16 left-6 z-20 flex items-center gap-2.5 bg-[#120E09]/90 backdrop-blur-md border border-[#E5C158]/40 rounded-full pl-3 pr-4 py-2 shadow-xl shadow-black/40">
+        <span className="relative flex h-2.5 w-2.5 flex-shrink-0">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+          <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
+        </span>
+        <Eye className="w-3.5 h-3.5 text-[#E5C158] flex-shrink-0" />
+        <span className="text-xs font-sans font-semibold text-[#F9F5EC] whitespace-nowrap">
+          1.2+ Cr visited
+        </span>
       </div>
 
       {/* Scroll Down Indicator */}
