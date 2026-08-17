@@ -63,8 +63,6 @@ export default function Footer() {
                 4th Floor, Aggarwal Metro Height, 453, Netaji Subhash Place, Pitampura, Delhi 110034
               </span>
               <div className="flex items-center gap-4 mt-1 text-xs font-mono text-royal-gold">
-                <a href="tel:+919311512354" className="hover:underline hover:text-ivory transition-colors">+91 93115 12354</a>
-                <span className="text-royal-gold/50">•</span>
                 <a href="mailto:info@primesuccess.media" className="hover:underline hover:text-ivory transition-colors">info@primesuccess.media</a>
               </div>
             </div>
@@ -101,6 +99,7 @@ export default function Footer() {
               <li><Link href="/about" className="hover:text-royal-gold transition-colors">About Us</Link></li>
               <li><Link href="/awards" className="hover:text-royal-gold transition-colors">The Awards</Link></li>
               <li><Link href="/winners" className="hover:text-royal-gold transition-colors">Honoured Winners</Link></li>
+              <li><Link href="/careers" className="hover:text-royal-gold transition-colors">Careers</Link></li>
             </ul>
           </div>
 

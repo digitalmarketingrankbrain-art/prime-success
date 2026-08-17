@@ -1,12 +1,9 @@
 import SectionHeading from "@/components/ui/SectionHeading";
 import AwardCategoriesSection from "@/components/sections/AwardCategoriesSection";
-import TrophyShowcase from "@/components/sections/TrophyShowcase";
 import NominationCTA from "@/components/sections/NominationCTA";
 import Reveal from "@/components/animations/Reveal";
 import Parallax from "@/components/animations/Parallax";
-import GoldDivider from "@/components/ui/GoldDivider";
 import { awardsData } from "@/data/mockData";
-import { Crown, Trophy, ShieldCheck, Scale, Award } from "lucide-react";
 
 export const metadata = {
   title: "The Awards — Categories & Nomination Guidelines | Prime Success",
@@ -33,25 +30,6 @@ const PROCESS_STEPS = [
     step: "04",
     title: "Induction & Royal Gala",
     description: "Honorees are officially announced and inducted into the Digital Hall of Fame at the annual Grand Awards Gala.",
-  },
-];
-
-const RECOGNITION_PRIVILEGES = [
-  {
-    title: "Immutable Digital Hall of Fame Induction",
-    desc: "A permanent digital monument and citation page showcasing the honoree's life work, achievements, and impact rationale.",
-  },
-  {
-    title: "Hand-Crafted 24K Gold Trophy Insignia",
-    desc: "Each laureate receives a bespoke 24K gold-plated crystal trophy crafted by royal artisans in London.",
-  },
-  {
-    title: "Private Sovereign Networking Gala",
-    desc: "VIP seating and keynotes at the annual invitation-only Grand Awards Gala alongside heads of state and global CEOs.",
-  },
-  {
-    title: "Feature Cover Story & Print Folio",
-    desc: "Exclusive editorial profile in Prime Success Magazine distributed to private embassies and institutional syndicates globally.",
   },
 ];
 
@@ -93,40 +71,6 @@ export default function AwardsPage() {
           </div>
         </div>
 
-        <GoldDivider variant="crest" className="my-24" />
-
-        {/* Privileges of Recognition Section */}
-        <div className="my-20">
-          <SectionHeading
-            eyebrow="LAUREATE PRIVILEGES"
-            title="THE RECOGNITION INSIGNIA"
-            subtitle="Induction into Prime Success confers unprecedented global prestige and enduring benefits."
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {RECOGNITION_PRIVILEGES.map((priv, idx) => (
-              <Reveal key={idx} delay={idx * 0.1}>
-                <Parallax speed={idx % 2 === 0 ? -20 : 20}>
-                  <div className="p-8 bg-luxury-dark border border-royal-gold/25 flex flex-col gap-3 shadow-md hover:border-royal-gold transition-colors">
-                    <div className="flex items-center gap-3">
-                      <Trophy className="w-6 h-6 text-royal-gold" />
-                      <h4 className="font-serif text-xl font-bold text-ivory">{priv.title}</h4>
-                    </div>
-                    <p className="font-sans text-xs text-cream/80 leading-relaxed font-light mt-1">
-                      {priv.desc}
-                    </p>
-                  </div>
-                </Parallax>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* 3D Gold Trophy Monument Showcase */}
-      <TrophyShowcase className="my-16" />
-
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Categories Section */}
         <AwardCategoriesSection categories={awardsData} />
       </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { Building, MapPin, Phone, Mail } from "lucide-react";
+import { Building, MapPin, Mail } from "lucide-react";
 
 export default function ContactHeadquarters() {
   return (
@@ -27,17 +27,12 @@ export default function ContactHeadquarters() {
         <div>
           <strong className="block text-ivory text-sm font-semibold mb-1">Corporate Office</strong>
           <span className="leading-relaxed">
-            4th Floor, Aggarwal Metro Heights, 458-A, Netaji Subhash Place, Pitampura, Delhi 110034
+            4th Floor, Aggarwal Metro Height, 453, Netaji Subhash Place, Pitampura, Delhi 110034
           </span>
         </div>
       </div>
 
-      {/* Direct Line & Email */}
-      <div className="flex items-center gap-4 text-xs font-sans text-cream/80 border-t border-royal-gold/15 pt-4 font-mono">
-        <Phone className="w-5 h-5 text-royal-gold flex-shrink-0" />
-        <a href="tel:+919311512354" className="hover:text-royal-gold transition-colors">+91 93115 12354</a>
-      </div>
-
+      {/* Email */}
       <div className="flex items-center gap-4 text-xs font-sans text-cream/80 border-t border-royal-gold/15 pt-4 font-mono">
         <Mail className="w-5 h-5 text-royal-gold flex-shrink-0" />
         <a href="mailto:info@primesuccess.media" className="hover:text-royal-gold transition-colors">info@primesuccess.media</a>

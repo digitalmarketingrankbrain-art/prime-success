@@ -24,7 +24,6 @@ export default function AwardCategoriesSection({ categories }: AwardCategoriesSe
       <div className="absolute inset-0 bg-noise opacity-20 pointer-events-none" />
       <div className="max-w-7xl mx-auto relative z-10">
         <SectionHeading
-          number="04"
           eyebrow="PILLARS OF DISTINCTION"
           title="AWARD CATEGORIES"
           subtitle="Eight prestigious domains representing the pinnacle of human endeavor and leadership."
