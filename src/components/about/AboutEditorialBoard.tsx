@@ -5,21 +5,21 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 const EDITORIAL_BOARD = [
   {
-    name: "Brijesh",
-    role: "Founder & CEO",
-    bio: "Leads Prime Success Media's overall vision, strategy, and institutional growth.",
+    name: "Brijesh Kumar",
+    role: "Editor-in-Chief & Publisher",
+    bio: "Former financial editor with 25 years of international journalism experience across London, Dubai, and New Delhi.",
     image: "/about/brijesh-sir.webp",
   },
   {
-    name: "Nakul",
-    role: "Director",
-    bio: "Oversees editorial direction and operational execution across the organisation.",
+    name: "Yash Kumar",
+    role: "Senior Editorial Director",
+    bio: "Specialist in sovereign wealth governance, industrial policy, and global leadership profiles.",
     image: "/about/nakul.webp",
   },
   {
-    name: "Ankit",
-    role: "Director",
-    bio: "Drives key initiatives and cross-functional operations for Prime Success Media.",
+    name: "Ankit Pal",
+    role: "Technology & Innovation Editor",
+    bio: "Pioneer in artificial intelligence research journalism and clean energy transition documentation.",
     image: "/about/ankit-sir.webp",
   },
 ];
@@ -29,9 +29,9 @@ export default function AboutEditorialBoard() {
     <div className="my-20">
       <SectionHeading
         number="THE BOARD"
-        eyebrow="OUR LEADERSHIP"
-        title="MEET THE TEAM"
-        subtitle="The founders and directors guiding Prime Success Media's vision, standards, and growth."
+        eyebrow="EDITORIAL LEADERSHIP"
+        title="OUR EDITORIAL COUNCIL"
+        subtitle="Guided by veteran journalists and corporate advisors committed to truth, rigor, and aesthetic dignity."
       />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-12">
