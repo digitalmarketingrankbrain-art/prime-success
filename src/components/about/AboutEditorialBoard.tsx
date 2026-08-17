@@ -5,22 +5,22 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 const EDITORIAL_BOARD = [
   {
-    name: "Mr. Julian Vance",
-    role: "Editor-in-Chief & Publisher",
-    bio: "Former financial editor with 25 years of international journalism experience across London, Dubai, and New Delhi.",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&auto=format&fit=crop",
+    name: "Brijesh",
+    role: "Founder & CEO",
+    bio: "Leads Prime Success Media's overall vision, strategy, and institutional growth.",
+    image: "/about/brijesh-sir.webp",
   },
   {
-    name: "Mrs. Victoria Sterling",
-    role: "Senior Editorial Director",
-    bio: "Specialist in sovereign wealth governance, industrial policy, and global leadership profiles.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop",
+    name: "Nakul",
+    role: "Director",
+    bio: "Oversees editorial direction and operational execution across the organisation.",
+    image: "/about/nakul.webp",
   },
   {
-    name: "Mr. Devon Reynolds",
-    role: "Technology & Innovation Editor",
-    bio: "Pioneer in artificial intelligence research journalism and clean energy transition documentation.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop",
+    name: "Ankit",
+    role: "Director",
+    bio: "Drives key initiatives and cross-functional operations for Prime Success Media.",
+    image: "/about/ankit-sir.webp",
   },
 ];
 
@@ -29,9 +29,9 @@ export default function AboutEditorialBoard() {
     <div className="my-20">
       <SectionHeading
         number="THE BOARD"
-        eyebrow="EDITORIAL LEADERSHIP"
-        title="OUR EDITORIAL COUNCIL"
-        subtitle="Guided by veteran journalists and corporate advisors committed to truth, rigor, and aesthetic dignity."
+        eyebrow="OUR LEADERSHIP"
+        title="MEET THE TEAM"
+        subtitle="The founders and directors guiding Prime Success Media's vision, standards, and growth."
       />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-12">
@@ -40,7 +40,7 @@ export default function AboutEditorialBoard() {
             key={idx}
             className="p-6 bg-luxury-card border border-royal-gold/30 flex flex-col gap-4 shadow-xl hover:border-royal-gold transition-colors"
           >
-            <div className="relative aspect-square w-full border border-royal-gold/20 overflow-hidden">
+            <div className="relative w-full h-100 border border-royal-gold/20 overflow-hidden bg-luxury-dark">
               <Image
                 src={member.image}
                 alt={member.name}
