@@ -33,10 +33,10 @@ export default function LiveVisitorCounter() {
 
     let timeoutId: ReturnType<typeof setTimeout>;
     const scheduleNext = () => {
-      const delay = 3000 + Math.random() * 5000;
+      const delay = 30000 + Math.random() * 20000; // 30-50s
       timeoutId = setTimeout(() => {
         setCount((prev) => {
-          const next = (prev ?? initial) + Math.floor(Math.random() * 15) + 1;
+          const next = (prev ?? initial) + Math.floor(Math.random() * 25) + 5; // +5 to +29
           localStorage.setItem(STORAGE_COUNT_KEY, String(next));
           return next;
         });

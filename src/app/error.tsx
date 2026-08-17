@@ -21,7 +21,7 @@ export default function Error({
       <div className="max-w-xl w-full bg-[#120E09] border border-[#E5C158]/40 p-8 sm:p-12 shadow-2xl rounded-2xl text-center flex flex-col items-center gap-6 relative overflow-hidden">
         {/* Top Ornamental Brand Badge */}
         <div className="flex items-center gap-3 bg-[#6B0E16]/60 border border-[#E5C158]/50 px-4 py-1.5 rounded-full shadow-lg">
-          <BrandCrown className="w-5 h-5" variant="with-shadow" />
+          <BrandCrown className="w-5 h-5" />
           <span className="text-[11px] font-sans font-bold text-[#E5C158] uppercase tracking-[0.25em]">
             SYSTEM CONCIERGE DISPATCH
           </span>

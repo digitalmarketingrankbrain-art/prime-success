@@ -68,7 +68,7 @@ export default function Header() {
         >
           <div className="relative w-12 h-12 md:w-14 md:h-14 flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
             <Image
-              src="/icon.png"
+              src="/images/icon.png"
               alt="Prime Success Media Logo"
               fill
               className="object-contain"

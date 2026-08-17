@@ -5,9 +5,7 @@ export default function Loading() {
   return (
     <div className="fixed inset-0 z-[100] bg-gradient-to-b from-[#080604] via-[#32060B] to-[#080604] flex flex-col items-center justify-center pointer-events-none border-b-2 border-[#E5C158]/60 shadow-2xl">
       <div className="flex flex-col items-center gap-4 animate-pulse">
-        <div className="w-16 h-16 rounded-full border-2 border-[#E5C158] bg-[#6B0E16]/40 flex items-center justify-center shadow-lg shadow-[#E5C158]/30 overflow-hidden p-2">
-          <BrandCrown className="w-10 h-10" variant="with-shadow" />
-        </div>
+        <BrandCrown className="w-20 h-20 drop-shadow-lg" />
         <span className="font-serif text-lg tracking-[0.3em] font-bold text-[#F9F5EC] mt-2">
           PRIME SUCCESS
         </span>

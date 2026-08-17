@@ -23,7 +23,7 @@ export default function WinnerCard({ winner, index }: WinnerCardProps) {
           containerClassName="border-b border-royal-gold/20"
         />
         <div className="absolute top-4 left-4 z-20 bg-luxury-black/85 backdrop-blur-md px-3 py-1 border border-royal-gold/60 text-royal-gold text-[10px] tracking-[0.25em] font-serif font-bold uppercase shadow-md flex items-center gap-1.5">
-          <BrandCrown className="w-4 h-4" variant="with-shadow" />
+          <BrandCrown className="w-4 h-4" />
           <span>{index}</span>
         </div>
       </div>

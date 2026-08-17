@@ -12,6 +12,7 @@ import TrophyShowcase from "@/components/sections/TrophyShowcase";
 import EventSection from "@/components/sections/EventSection";
 import PatronageSection from "@/components/sections/PatronageSection";
 import NominationCTA from "@/components/sections/NominationCTA";
+import SiteUpdateNotice from "@/components/sections/SiteUpdateNotice";
 import ErrorBoundary from "@/components/ui/ErrorBoundary";
 import { articlesData, awardsData, galaEventData } from "@/data/mockData";
 
@@ -83,6 +84,11 @@ export default function HomePage() {
       {/* SECTION 13: NOMINATION CTA */}
       <ErrorBoundary sectionName="Nomination Banner">
         <NominationCTA />
+      </ErrorBoundary>
+
+      {/* SITE UPDATE NOTICE: New Logo & Theme Announcement */}
+      <ErrorBoundary sectionName="Site Update Notice">
+        <SiteUpdateNotice />
       </ErrorBoundary>
 
       {/* LIVE VISITOR COUNTER: Floating Social Proof Badge */}

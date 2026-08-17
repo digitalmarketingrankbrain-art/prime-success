@@ -17,7 +17,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-4 group">
               <div className="relative w-14 h-14 md:w-16 md:h-16 flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
                 <Image
-                  src="/icon.png"
+                  src="/images/icon.png"
                   alt="Prime Success Media Logo"
                   fill
                   className="object-contain"
@@ -42,7 +42,7 @@ export default function Footer() {
             <div className="flex flex-col gap-1.5 font-sans text-xs text-cream/90 border-t border-royal-gold/20 pt-3">
               <span className="font-semibold text-royal-gold">Corporate Office:</span>
               <span className="text-cream/80 leading-normal">
-                4th Floor, Aggarwal Metro Height, 458-A, Netaji Subhash Place, Pitampura, Delhi 110034
+                4th Floor, Aggarwal Metro Height, 453, Netaji Subhash Place, Pitampura, Delhi 110034
               </span>
               <div className="flex items-center gap-4 mt-2 text-xs font-mono text-royal-gold">
                 <a href="tel:+919311512354" className="hover:underline hover:text-ivory transition-colors">+91 93115 12354</a>

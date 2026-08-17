@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Cinzel, Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
@@ -38,9 +39,9 @@ export const metadata: Metadata = {
     "Business Visionaries",
   ],
   icons: {
-    icon: "/images/prime-success-logo.png",
-    shortcut: "/images/prime-success-logo.png",
-    apple: "/images/prime-success-logo.png",
+    icon: "/images/icon.png",
+    shortcut: "/images/icon.png",
+    apple: "/images/icon.png",
   },
 };
 
@@ -72,10 +73,12 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
-        <link rel="icon" href="/images/prime-success-logo.png" type="image/png" sizes="any" />
-        <link rel="shortcut icon" href="/images/prime-success-logo.png" />
-        <link rel="apple-touch-icon" href="/images/prime-success-logo.png" />
+        <Script id="theme-script" strategy="beforeInteractive">
+          {themeScript}
+        </Script>
+        <link rel="icon" href="/images/icon.png" type="image/png" sizes="any" />
+        <link rel="shortcut icon" href="/images/icon.png" />
+        <link rel="apple-touch-icon" href="/images/icon.png" />
       </head>
       <body
         className="bg-luxury-black text-ivory font-sans antialiased selection:bg-royal-gold selection:text-luxury-black min-h-screen flex flex-col overflow-x-hidden"

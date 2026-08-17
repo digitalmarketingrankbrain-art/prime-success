@@ -16,7 +16,7 @@ export const surveysData: SurveyPoll[] = [
   },
   {
     id: "poll-02",
-    title: "Most Prime Success Leader of Southern African",
+    title: "Most Prime Success Leader of South Africa",
     category: "AFRICA & EUROPE",
     totalVotes: 1019300,
     options: [

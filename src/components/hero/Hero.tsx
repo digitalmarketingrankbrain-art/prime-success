@@ -24,6 +24,12 @@ export default function Hero() {
         { scale: 1, duration: 2.2 }
       )
         .fromTo(
+          ".hero-update-badge",
+          { opacity: 0, y: 16 },
+          { opacity: 1, y: 0, duration: 0.8 },
+          "-=1.6"
+        )
+        .fromTo(
           ".hero-eyebrow",
           { opacity: 0, y: 20 },
           { opacity: 1, y: 0, duration: 0.9 },
@@ -100,8 +106,15 @@ export default function Hero() {
         ref={textRef}
         className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center gap-6"
       >
+        <div className="hero-update-badge flex items-center gap-2 border border-[#E5C158]/40 bg-[#120E09]/70 backdrop-blur-md px-4 py-1.5 rounded-full">
+          <Sparkles className="w-3.5 h-3.5 text-[#E5C158] flex-shrink-0" />
+          <span className="text-[10px] sm:text-xs font-sans text-[#E8DCC4] tracking-wide">
+            A Refined Identity — our brand logo and site theme have been newly unveiled
+          </span>
+        </div>
+
         <div className="hero-eyebrow flex items-center gap-3 bg-[#6B0E16]/50 backdrop-blur-md border border-[#E5C158]/60 px-5 py-2 rounded-full shadow-lg">
-          <BrandCrown className="w-5 h-5" variant="with-shadow" />
+          <BrandCrown className="w-5 h-5" />
           <span className="text-xs tracking-[0.3em] font-sans text-[#E5C158] font-bold uppercase">
             THE INTERNATIONAL HALL OF HONOUR
           </span>

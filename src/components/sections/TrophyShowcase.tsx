@@ -102,7 +102,7 @@ export default function TrophyShowcase({ className }: TrophyShowcaseProps) {
           className="w-36 h-36 md:w-44 md:h-44 rounded-full border-2 border-[#E5C158] bg-gradient-to-tr from-[#32060B] via-[#080604] to-[#6B0E16]/50 p-6 flex flex-col items-center justify-center shadow-2xl shadow-[#E5C158]/30 cursor-pointer transform-preserve-3d"
         >
           <Trophy className="w-16 h-16 md:w-20 md:h-20 text-[#E5C158] drop-shadow-[0_0_20px_rgba(229,193,88,0.8)] animate-pulse" />
-          <BrandCrown className="w-8 h-8 md:w-9 md:h-9 -mt-2" variant="with-shadow" />
+          <BrandCrown className="w-8 h-8 md:w-9 md:h-9 -mt-2" />
         </div>
       </div>
 
