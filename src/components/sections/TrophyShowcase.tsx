@@ -3,7 +3,7 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Trophy, Sparkles, Award } from "lucide-react";
+import { Trophy, Award } from "lucide-react";
 import { cn } from "@/lib/utils";
 import BrandCrown from "@/components/ui/BrandCrown";
 
@@ -108,23 +108,17 @@ export default function TrophyShowcase({ className }: TrophyShowcaseProps) {
 
       {/* Editorial Statement */}
       <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center gap-4">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#080604]/80 border border-[#E5C158]/40 text-[#E5C158] text-xs font-sans font-bold tracking-[0.3em] uppercase">
-          <Sparkles className="w-3.5 h-3.5 text-[#E5C158]" />
-          <span>THE 24K GOLD RECOGNITION INSIGNIA</span>
-          <Sparkles className="w-3.5 h-3.5 text-[#E5C158]" />
-        </div>
-
         <h3 className="font-serif text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FFF1B0] via-[#E5C158] to-[#B38E22] drop-shadow-md leading-tight">
           CRAFTED FOR IMMUTABLE HISTORY
         </h3>
 
         <p className="font-sans text-sm md:text-base text-[#E8DCC4] font-light leading-relaxed max-w-2xl">
-          Hand-forged by royal master artisans in London, every Prime Success trophy is cast in solid bronze and plated in 24K gold, carrying an individually engraved citation of the honoree&apos;s life legacy.
+          Hand-forged by royal master artisans in London, every Prime Success trophy is cast in solid bronze, carrying an individually engraved citation of the honoree&apos;s life legacy.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-6 mt-4 text-xs font-sans text-[#E5C158] font-semibold uppercase tracking-widest">
           <span className="flex items-center gap-1.5">
-            <Award className="w-4 h-4 text-[#E5C158]" /> 24K PURE GOLD PLATING
+            <Award className="w-4 h-4 text-[#E5C158]" /> PREMIUM BRONZE CASTING
           </span>
           <span className="text-[#E5C158]/50">•</span>
           <span>INDIVIDUAL CITATION ENGRAVING</span>

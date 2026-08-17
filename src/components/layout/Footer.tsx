@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import GoldDivider from "@/components/ui/GoldDivider";
+import { usePageTransition } from "@/components/animations/PageTransition";
 
 function InstagramIcon({ className }: { className?: string }) {
   return (
@@ -24,6 +25,13 @@ function FacebookIcon({ className }: { className?: string }) {
 }
 
 export default function Footer() {
+  const { navigateTo } = usePageTransition();
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    navigateTo(href);
+  };
+
   return (
     <footer className="bg-luxury-dark border-t border-royal-gold/30 text-ivory relative overflow-hidden pt-6 pb-4 px-6 md:px-12">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-royal-gold/50 to-transparent" />
@@ -96,10 +104,10 @@ export default function Footer() {
               INSTITUTION
             </h4>
             <ul className="flex flex-col gap-2 font-sans text-xs tracking-wider text-cream">
-              <li><Link href="/about" className="hover:text-royal-gold transition-colors">About Us</Link></li>
+              <li><Link href="/about" onClick={(e) => handleNavClick(e, "/about")} className="hover:text-royal-gold transition-colors">About Us</Link></li>
               <li><Link href="/awards" className="hover:text-royal-gold transition-colors">The Awards</Link></li>
               <li><Link href="/winners" className="hover:text-royal-gold transition-colors">Honoured Winners</Link></li>
-              <li><Link href="/careers" className="hover:text-royal-gold transition-colors">Careers</Link></li>
+              <li><Link href="/careers" onClick={(e) => handleNavClick(e, "/careers")} className="hover:text-royal-gold transition-colors">Careers</Link></li>
             </ul>
           </div>
 
