@@ -61,7 +61,7 @@ export default function MagazineIssuesGrid({ issues }: MagazineIssuesGridProps) 
           </span>
           <span className="text-[11px] font-sans text-cream/80 uppercase font-semibold tracking-wider mt-1 flex items-center gap-1">
             <ShieldCheck className="w-3.5 h-3.5 text-royal-gold" />
-            PRGI Accredited
+            PRGI Registered
           </span>
         </div>
 

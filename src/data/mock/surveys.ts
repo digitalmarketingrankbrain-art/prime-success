@@ -6,6 +6,7 @@ export const surveysData: SurveyPoll[] = [
     title: "Most Prime Success Leader of Europe",
     category: "GLOBAL LEADERSHIP",
     totalVotes: 1866000,
+    status: "closed",
     options: [
       { id: "opt-1", label: "Mr. Emmanuel Macron (France, President)", votes: 1074411 },
       { id: "opt-2", label: "Mr. Friedrich Merz (Germany, Chancellor)", votes: 339269 },
@@ -45,6 +46,7 @@ export const surveysData: SurveyPoll[] = [
     title: "Most Prime Success Leader of  East Africa",
     category: "AFRICA & EUROPE",
     totalVotes: 1139452,
+    status: "live",
     options: [
       { id: "opt-1", label: "Mr. Abiy Ahmed (Ethiopia, Prime Minister)", votes: 1054357 },
       { id: "opt-2", label: "Mrs. Samia Suluhu Hassan (Tanzania, President)", votes: 24553 },
@@ -59,6 +61,7 @@ export const surveysData: SurveyPoll[] = [
     title: "Best Five Star Hotel in Delhi?",
     category: "EXCELLENCE & HOSPITALITY",
     totalVotes: 1623700,
+    status: "closed",
     options: [
       { id: "opt-1", label: "ITC Maurya, Chanakayapuri", votes: 628381 },
       { id: "opt-2", label: "Shangri-La Eros, Connaught Place", votes: 433445 },
@@ -85,6 +88,7 @@ export const surveysData: SurveyPoll[] = [
     title: "Which Political Party is Best in Decision Making?",
     category: "GOVERNANCE & POLICY",
     totalVotes: 1325000,
+    status: "closed",
     options: [
       { id: "opt-1", label: "Bharatiya Janata Party", votes: 527473 },
       { id: "opt-2", label: "Communist Party of India", votes: 345858 },
@@ -150,6 +154,7 @@ export const surveysData: SurveyPoll[] = [
     title: "Which State Government Provides Best Education?",
     category: "GOVERNANCE & POLICY",
     totalVotes: 1222700,
+    status: "upcoming",
     options: [
       { id: "opt-1", label: "Delhi", votes: 456782 },
       { id: "opt-2", label: "Uttar Pradesh", votes: 327591 },
@@ -163,6 +168,7 @@ export const surveysData: SurveyPoll[] = [
     title: "Which is the Most Emerging Bank in 2026?",
     category: "GOVERNANCE & POLICY",
     totalVotes: 1766600,
+    status: "upcoming",
     options: [
       { id: "opt-1", label: "HDFC Bank", votes: 622375 },
       { id: "opt-2", label: "AU Small Finance Bank", votes: 465673 },
@@ -202,6 +208,7 @@ export const surveysData: SurveyPoll[] = [
     title: "Who is best news channel in India?",
     category: "WORLD & LEADERSHIP",
     totalVotes: 1842800,
+    status: "closed",
     options: [
       { id: "opt-1", label: "Aaj tak", votes: 733606 },
       { id: "opt-2", label: "DD News", votes: 481017 },
@@ -228,6 +235,7 @@ export const surveysData: SurveyPoll[] = [
     title: "Who is the best cabinet Minsiter?",
     category: "WORLD & LEADERSHIP",
     totalVotes: 1080100,
+    status: "closed",
     options: [
       { id: "opt-1", label: "Mr. Raj Nath Singh", votes: 381303 },
       { id: "opt-2", label: "Mr. Amit Shah", votes: 283254 },
@@ -254,6 +262,7 @@ export const surveysData: SurveyPoll[] = [
     title: "Who will be the Ruling Party of Delhi in 2030?",
     category: "WORLD & LEADERSHIP",
     totalVotes: 1182600,
+    status: "upcoming",
     options: [
       { id: "opt-1", label: "Bharatiya Janata Party", votes: 456304 },
       { id: "opt-2", label: "Bahujan Samaj Party", votes: 312623 },
@@ -267,6 +276,7 @@ export const surveysData: SurveyPoll[] = [
     title: "Best Small Finance Bank in India 2026?",
     category: "GOVERNANCE & POLICY",
     totalVotes: 1940280,
+    status: "live",
     options: [
       { id: "opt-1", label: "AU Small Finance Bank", votes: 704820 },
       { id: "opt-2", label: "Capital Small Finance Bank", votes: 402150 },

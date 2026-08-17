@@ -132,7 +132,7 @@ export default function ShortNewsSection() {
             <div className="pt-4 border-t border-[#E5C158]/20 flex flex-wrap items-center justify-between gap-4 text-xs font-sans text-[#E5C158] font-bold">
               <span className="flex items-center gap-1.5">
                 <ShieldCheck className="w-4 h-4 text-[#E5C158]" />
-                PRGI Accredited Newsroom Dispatch
+                PRGI Registered Newsroom Dispatch
               </span>
               <button
                 onClick={() => setActiveModalItem(null)}

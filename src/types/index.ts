@@ -48,19 +48,6 @@ export interface AwardCategory {
   slug: string;
 }
 
-export interface GalaEvent {
-  id: string;
-  title: string;
-  theme: string;
-  date: string;
-  location: string;
-  venue: string;
-  image: string;
-  description: string;
-  schedule: { time: string; activity: string }[];
-  isUpcoming?: boolean;
-}
-
 export interface Interview {
   id: string;
   slug: string;
@@ -91,6 +78,7 @@ export interface SurveyPoll {
   category: string;
   totalVotes: number;
   options: SurveyOption[];
+  status?: "upcoming" | "live" | "closed";
 }
 
 export interface MagazineIssue {

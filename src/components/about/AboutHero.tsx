@@ -5,10 +5,9 @@ import Parallax from "@/components/animations/Parallax";
 import Reveal from "@/components/animations/Reveal";
 
 const STATS = [
-  { label: "FOUNDED YEAR", value: "2026" },
+  { label: "FOUNDED YEAR", value: "2023" },
   { label: "MONTHLY READERSHIP", value: "50,000+" },
-  { label: "FORTNIGHTLY EDITIONS", value: "21 ISSUES" },
-  { label: "GLOBAL EDITION", value: "DELHI / NCR" },
+  { label: "GLOBAL PRESENCE", value: "WORLDWIDE" },
 ];
 
 export default function AboutHero() {
@@ -22,7 +21,7 @@ export default function AboutHero() {
       />
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 my-12">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 my-12">
         {STATS.map((stat, idx) => (
           <Reveal key={idx} delay={idx * 0.1}>
             <Parallax speed={idx % 2 === 0 ? -10 : 10}>

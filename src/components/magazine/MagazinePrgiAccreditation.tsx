@@ -18,7 +18,7 @@ export default function MagazinePrgiAccreditation({ issue }: Props) {
           </h3>
         </div>
         <p className="font-sans text-xs sm:text-sm text-[#E8DCC4] leading-relaxed font-light">
-          This issue ({issue.issueNumber}, {issue.monthYear}) is a government-accredited fortnightly publication registered under PRGI Reg No. <strong>{issue.prgiRegNo}</strong>. All digital archival copies preserved in this repository represent exact vector print reproductions.
+          This issue ({issue.issueNumber}, {issue.monthYear}) is a government-registered fortnightly publication registered under PRGI Reg No. <strong>{issue.prgiRegNo}</strong>. All digital archival copies preserved in this repository represent exact vector print reproductions.
         </p>
         <div className="flex flex-wrap items-center gap-6 pt-4 border-t border-royal-gold/20 text-xs font-sans text-royal-gold">
           <span className="flex items-center gap-2">

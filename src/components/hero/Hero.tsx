@@ -168,14 +168,14 @@ export default function Hero() {
           <span className="text-[#E5C158]/40 hidden sm:inline">•</span>
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-[#E5C158] shrink-0" />
-            <span className="font-bold text-[#E5C158] whitespace-nowrap">PRGI Accredited</span>
+            <span className="font-bold text-[#E5C158] whitespace-nowrap">PRGI Registered</span>
           </div>
         </div>
 
       </div>
 
       {/* Live Visitor Count Badge */}
-      <div className="absolute bottom-16 left-6 z-20 flex items-center gap-2.5 bg-[#120E09]/90 backdrop-blur-md border border-[#E5C158]/40 rounded-full pl-3 pr-4 py-2 shadow-xl shadow-black/40">
+      <div className="absolute top-[62%] -translate-y-1/2 left-6 z-20 flex items-center gap-2.5 bg-[#120E09]/90 backdrop-blur-md border border-[#E5C158]/40 rounded-full pl-3 pr-4 py-2 shadow-xl shadow-black/40">
         <span className="relative flex h-2.5 w-2.5 flex-shrink-0">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
           <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />

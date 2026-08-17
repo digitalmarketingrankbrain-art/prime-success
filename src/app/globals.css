@@ -115,7 +115,7 @@ html.lenis body {
 
 .animate-marquee {
   display: inline-flex;
-  animation: marquee 35s linear infinite;
+  animation: marquee 60s linear infinite;
   will-change: transform;
 }
 
