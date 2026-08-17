@@ -28,7 +28,7 @@ export default function Button({
 
   const variants = {
     primary:
-      "bg-royal-red text-ivory border border-royal-gold/40 hover:bg-royal-red/90 hover:border-royal-gold shadow-lg shadow-royal-red/20",
+      "bg-royal-red text-[#F9F5EC] border border-royal-gold/40 hover:bg-royal-red/90 hover:border-royal-gold shadow-lg shadow-royal-red/20",
     secondary:
       "bg-royal-gold text-luxury-black border border-royal-gold hover:bg-royal-gold-light shadow-lg shadow-royal-gold/10 font-bold",
     outline:

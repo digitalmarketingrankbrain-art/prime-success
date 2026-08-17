@@ -3,7 +3,6 @@
 import { useState } from "react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
-import Reveal from "@/components/animations/Reveal";
 import GoldDivider from "@/components/ui/GoldDivider";
 import { surveysData } from "@/data/mockData";
 import { SurveyPoll } from "@/types";
@@ -17,6 +16,8 @@ export default function SurveysPage() {
     "poll-01": true, // Show results by default for poll-01 matching screenshot
   });
   const [totalUserVotes, setTotalUserVotes] = useState(0);
+
+  const totalCategories = new Set(polls.map((poll) => poll.category)).size;
 
   const handleOptionSelect = (pollId: string, optionId: string) => {
     setSelectedOptions((prev) => ({ ...prev, [pollId]: optionId }));
@@ -63,7 +64,7 @@ export default function SurveysPage() {
         <div className="my-12 p-8 bg-luxury-card border border-royal-gold/30 flex flex-wrap items-center justify-around gap-8 text-center shadow-xl">
           <div className="flex flex-col items-center">
             <span className="font-serif text-4xl md:text-5xl font-bold text-gold-gradient drop-shadow-md">
-              26
+              {polls.length}
             </span>
             <span className="text-xs font-sans text-cream/80 uppercase font-semibold tracking-wider mt-1">
               Live Polls
@@ -74,7 +75,7 @@ export default function SurveysPage() {
 
           <div className="flex flex-col items-center">
             <span className="font-serif text-4xl md:text-5xl font-bold text-gold-gradient drop-shadow-md">
-              8
+              {totalCategories}
             </span>
             <span className="text-xs font-sans text-cream/80 uppercase font-semibold tracking-wider mt-1">
               Categories
@@ -95,14 +96,13 @@ export default function SurveysPage() {
 
         {/* Grid of Poll Cards (Matching Screenshot) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-16">
-          {polls.map((poll, idx) => {
+          {polls.map((poll) => {
             const hasVoted = votedPolls[poll.id];
             const isResultsVisible = showResults[poll.id];
             const selectedOptId = selectedOptions[poll.id];
 
             return (
-              <Reveal key={poll.id} delay={idx * 0.06}>
-                <div className="bg-luxury-card border border-royal-gold/30 p-8 flex flex-col justify-between h-full shadow-xl hover:border-royal-gold/60 transition-all duration-300 relative group">
+                <div key={poll.id} className="bg-luxury-card border border-royal-gold/30 p-8 flex flex-col justify-between h-full shadow-xl hover:border-royal-gold/60 transition-all duration-300 relative group">
                   
                   {/* Top-Right Circular Dashed Stamp: LIVE */}
                   <div className="absolute top-6 right-6 w-11 h-11 rounded-full border border-dashed border-royal-gold/60 flex items-center justify-center text-[10px] font-sans font-bold text-royal-gold tracking-widest uppercase pointer-events-none">
@@ -223,7 +223,6 @@ export default function SurveysPage() {
                     </button>
                   </div>
                 </div>
-              </Reveal>
             );
           })}
         </div>

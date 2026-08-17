@@ -1,5 +1,4 @@
 import Hero from "@/components/hero/Hero";
-import LiveVisitorCounter from "@/components/sections/LiveVisitorCounter";
 import NewsTickerBar from "@/components/sections/NewsTickerBar";
 import PhilosophySection from "@/components/sections/PhilosophySection";
 import CoverStorySection from "@/components/sections/CoverStorySection";
@@ -89,11 +88,6 @@ export default function HomePage() {
       {/* SITE UPDATE NOTICE: New Logo & Theme Announcement */}
       <ErrorBoundary sectionName="Site Update Notice">
         <SiteUpdateNotice />
-      </ErrorBoundary>
-
-      {/* LIVE VISITOR COUNTER: Floating Social Proof Badge */}
-      <ErrorBoundary sectionName="Live Visitor Counter">
-        <LiveVisitorCounter />
       </ErrorBoundary>
     </div>
   );

@@ -4,6 +4,7 @@ import { useState } from "react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { Vote, CheckCircle2, ShieldCheck, TrendingUp, Sparkles, ChevronRight } from "lucide-react";
 import BrandCrown from "@/components/ui/BrandCrown";
+import { surveysData } from "@/data/mockData";
 
 interface PollOption {
   id: number;
@@ -14,48 +15,36 @@ interface PollOption {
   color: string;
 }
 
-const POLL_OPTIONS: PollOption[] = [
-  {
-    id: 0,
-    rank: 1,
-    name: "Mr. Yogi Adityanath",
-    title: "Chief Minister, Uttar Pradesh",
-    votes: 11887,
-    color: "from-[#FFF1B0] via-[#E5C158] to-[#B38E22]",
-  },
-  {
-    id: 1,
-    rank: 2,
-    name: "Mr. Pushkar Singh Dhami",
-    title: "Chief Minister, Uttarakhand",
-    votes: 9877,
-    color: "from-[#F4E296] via-[#D4AF37] to-[#85640D]",
-  },
-  {
-    id: 2,
-    rank: 3,
-    name: "Mr. Nayab Singh Saini",
-    title: "Chief Minister, Haryana",
-    votes: 8764,
-    color: "from-[#E5C158] to-[#997A15]",
-  },
-  {
-    id: 3,
-    rank: 4,
-    name: "Mr. Devendra Fadnavis",
-    title: "Chief Minister, Maharashtra",
-    votes: 7864,
-    color: "from-[#D4AF37] to-[#7A5B0B]",
-  },
-  {
-    id: 4,
-    rank: 5,
-    name: "Mr. N. Chandrababu Naidu",
-    title: "Chief Minister, Andhra Pradesh",
-    votes: 7658,
-    color: "from-[#C5A028] to-[#563F05]",
-  },
+// Mirrors the "Best Chief Minister in India" poll on the /surveys page (poll-22)
+// so both pages always show the same live data.
+const CM_POLL_ID = "poll-22";
+
+const STATE_TITLES: Record<string, string> = {
+  "Mr. Yogi Adityanath": "Chief Minister, Uttar Pradesh",
+  "Mr. Pushkar Singh Dhami": "Chief Minister, Uttarakhand",
+  "Mr. Nayab Singh Saini": "Chief Minister, Haryana",
+  "Mr. Devendra Fadnavis": "Chief Minister, Maharashtra",
+  "Mr. N. Chandrababu Naidu": "Chief Minister, Andhra Pradesh",
+};
+
+const RANK_COLORS = [
+  "from-[#FFF1B0] via-[#E5C158] to-[#B38E22]",
+  "from-[#F4E296] via-[#D4AF37] to-[#85640D]",
+  "from-[#E5C158] to-[#997A15]",
+  "from-[#D4AF37] to-[#7A5B0B]",
+  "from-[#C5A028] to-[#563F05]",
 ];
+
+const cmPoll = surveysData.find((poll) => poll.id === CM_POLL_ID);
+
+const POLL_OPTIONS: PollOption[] = (cmPoll?.options ?? []).map((opt, idx) => ({
+  id: idx,
+  rank: idx + 1,
+  name: opt.label,
+  title: STATE_TITLES[opt.label] ?? "",
+  votes: opt.votes,
+  color: RANK_COLORS[idx] ?? RANK_COLORS[RANK_COLORS.length - 1],
+}));
 
 const BASE_TOTAL_VOTES = POLL_OPTIONS.reduce((sum, opt) => sum + opt.votes, 0);
 

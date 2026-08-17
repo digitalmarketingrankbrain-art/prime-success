@@ -1,11 +1,13 @@
-import BrandCrown from "@/components/ui/BrandCrown";
+import Image from "next/image";
 import { Sparkles } from "lucide-react";
 
 export default function Loading() {
   return (
     <div className="fixed inset-0 z-[100] bg-gradient-to-b from-[#080604] via-[#32060B] to-[#080604] flex flex-col items-center justify-center pointer-events-none border-b-2 border-[#E5C158]/60 shadow-2xl">
       <div className="flex flex-col items-center gap-4 animate-pulse">
-        <BrandCrown className="w-20 h-20 drop-shadow-lg" />
+        <div className="relative w-20 h-20 drop-shadow-lg">
+          <Image src="/images/icon.png" alt="Prime Success" fill className="object-contain" priority />
+        </div>
         <span className="font-serif text-lg tracking-[0.3em] font-bold text-[#F9F5EC] mt-2">
           PRIME SUCCESS
         </span>

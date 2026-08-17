@@ -69,7 +69,7 @@ export default function ViksitBharatSection() {
                 India&apos;s journey since independence, and the monumental initiative to become a fully developed nation by 2047 — traced from early self-reliance to globalization, digital infrastructure, and comprehensive Economic & Sustainability dominance.
               </p>
 
-              <div className="p-4 bg-black/40 border-l-2 border-[#E5C158] text-xs font-sans text-[#E8DCC4] flex items-center gap-3 rounded-r-md">
+              <div className="p-4 bg-[rgba(0,0,0,0.4)] border-l-2 border-[#E5C158] text-xs font-sans text-[#E8DCC4] flex items-center gap-3 rounded-r-md">
                 <TrendingUp className="w-5 h-5 text-[#E5C158] flex-shrink-0" />
                 <span>Active Target: {TIMELINE_STEPS[activeStep].metric}</span>
               </div>
