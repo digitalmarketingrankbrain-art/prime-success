@@ -17,8 +17,8 @@ export default function EditorialEthicsPage() {
       <LegalSection title="1. Registration &amp; Accountability">
         <p>
           Prime Success Media is an officially registered fortnightly publication under the Press Registrar
-          General of India, Registration No. <strong className="text-ivory">DELENG/2023/90580</strong>. As a
-          registered publication, we are accountable to the standards of conduct expected of the Indian press.
+          General of India. As a registered publication, we are accountable to the standards of conduct
+          expected of the Indian press.
         </p>
       </LegalSection>
 
@@ -48,7 +48,7 @@ export default function EditorialEthicsPage() {
       <LegalSection title="5. Corrections Policy">
         <p>
           If you believe a factual error appears in one of our published stories, please write to{" "}
-          <a href="mailto:press@primesuccess.media" className="text-royal-gold hover:underline">press@primesuccess.media</a>{" "}
+          <a href="mailto:info@primesuccess.media" className="text-royal-gold hover:underline">info@primesuccess.media</a>{" "}
           with details. Verified corrections will be issued promptly and transparently.
         </p>
       </LegalSection>
@@ -71,7 +71,7 @@ export default function EditorialEthicsPage() {
       <LegalSection title="8. Reader Feedback">
         <p>
           We welcome scrutiny of our reporting. Reach our editorial desk any time at{" "}
-          <a href="mailto:press@primesuccess.media" className="text-royal-gold hover:underline">press@primesuccess.media</a>.
+          <a href="mailto:info@primesuccess.media" className="text-royal-gold hover:underline">info@primesuccess.media</a>.
         </p>
       </LegalSection>
     </LegalPageLayout>

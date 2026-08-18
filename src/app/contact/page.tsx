@@ -26,8 +26,8 @@ export default function ContactPage() {
               <h4 className="font-serif text-lg font-bold text-[#F9F5EC]">PRESS & MEDIA DESK</h4>
               <p className="font-light leading-relaxed">
                 For media credentials, broadcast rights, gala authentication, or syndication of Prime Success magazine stories, email{" "}
-                <a href="mailto:press@primesuccess.media" className="text-royal-gold hover:underline font-semibold">
-                  press@primesuccess.media
+                <a href="mailto:info@primesuccess.media" className="text-royal-gold hover:underline font-semibold">
+                  info@primesuccess.media
                 </a>
                 .
               </p>

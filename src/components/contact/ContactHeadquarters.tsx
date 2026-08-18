@@ -38,10 +38,6 @@ export default function ContactHeadquarters() {
           <Mail className="w-5 h-5 text-royal-gold flex-shrink-0" />
           <a href="mailto:info@primesuccess.media" className="hover:text-royal-gold transition-colors">info@primesuccess.media</a>
         </div>
-        <div className="flex items-center gap-4">
-          <Mail className="w-5 h-5 text-royal-gold flex-shrink-0" />
-          <a href="mailto:press@primesuccess.media" className="hover:text-royal-gold transition-colors">press@primesuccess.media</a>
-        </div>
       </div>
     </div>
   );

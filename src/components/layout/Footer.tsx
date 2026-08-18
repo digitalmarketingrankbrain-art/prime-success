@@ -81,7 +81,6 @@ export default function Footer() {
               </span>
               <div className="flex items-center gap-4 mt-1 text-xs font-mono text-royal-gold flex-wrap">
                 <a href="mailto:info@primesuccess.media" className="hover:underline hover:text-ivory transition-colors">info@primesuccess.media</a>
-                <a href="mailto:press@primesuccess.media" className="hover:underline hover:text-ivory transition-colors">press@primesuccess.media</a>
               </div>
             </div>
 

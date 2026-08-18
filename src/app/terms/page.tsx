@@ -28,7 +28,7 @@ export default function TermsPage() {
           the intellectual property of Prime Success Media or its licensors. Reproduction, redistribution, or
           syndication of any content — in whole or in part — requires prior written permission. For syndication
           requests, contact{" "}
-          <a href="mailto:press@primesuccess.media" className="text-royal-gold hover:underline">press@primesuccess.media</a>.
+          <a href="mailto:info@primesuccess.media" className="text-royal-gold hover:underline">info@primesuccess.media</a>.
         </p>
       </LegalSection>
 

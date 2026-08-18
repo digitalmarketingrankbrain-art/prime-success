@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { LogOut, LayoutDashboard } from "lucide-react";
+import { LogOut } from "lucide-react";
 
 interface Props {
   children: React.ReactNode;
@@ -30,7 +31,9 @@ export default function AdminShell({ children }: Props) {
     <div className="bg-luxury-black text-ivory min-h-screen">
       <div className="h-16 border-b border-royal-gold/20 px-6 flex items-center justify-between bg-luxury-dark sticky top-0 z-20">
         <Link href="/admin" className="flex items-center gap-2.5">
-          <LayoutDashboard className="w-5 h-5 text-royal-gold" />
+          <div className="relative w-8 h-8 flex-shrink-0">
+            <Image src="/images/icon.png" alt="Prime Success Media Logo" fill className="object-contain" priority />
+          </div>
           <span className="font-serif text-sm sm:text-base font-bold text-ivory tracking-wide">
             PRIME SUCCESS <span className="text-royal-gold">ADMIN</span>
           </span>

@@ -81,7 +81,7 @@ export default function CareersPage() {
             We're always open to hearing from exceptional talent. Send your resume and a brief note about yourself to our HR team.
           </p>
           <a
-            href="mailto:careers@primesuccess.media"
+            href="mailto:info@primesuccess.media"
             className="mt-2 inline-flex items-center justify-center px-7 py-3.5 bg-royal-gold text-luxury-black border border-royal-gold hover:bg-royal-gold-light shadow-lg shadow-royal-gold/10 font-sans font-bold tracking-widest uppercase text-xs transition-all duration-300 cursor-pointer"
           >
             EMAIL YOUR RESUME
