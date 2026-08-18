@@ -1,35 +1,13 @@
 import SectionHeading from "@/components/ui/SectionHeading";
 import Reveal from "@/components/animations/Reveal";
 import GoldDivider from "@/components/ui/GoldDivider";
-import { PenTool, Palette, TrendingUp, Code, Crown, HeartHandshake, ShieldCheck, Sparkles } from "lucide-react";
+import CareerDepartments from "@/components/careers/CareerDepartments";
+import { Crown, HeartHandshake, ShieldCheck, Sparkles } from "lucide-react";
 
 export const metadata = {
   title: "Careers — Join Prime Success Media",
   description: "Explore career opportunities across editorial, design, business development, and technology at Prime Success Media.",
 };
-
-const DEPARTMENTS = [
-  {
-    icon: <PenTool className="w-6 h-6 text-royal-gold" />,
-    title: "Editorial & Content",
-    desc: "Writers, researchers, and journalists shaping our magazine and digital coverage.",
-  },
-  {
-    icon: <Palette className="w-6 h-6 text-royal-gold" />,
-    title: "Design & Creative",
-    desc: "Visual designers and video editors crafting the Prime Success aesthetic.",
-  },
-  {
-    icon: <TrendingUp className="w-6 h-6 text-royal-gold" />,
-    title: "Business Development",
-    desc: "Sales, partnerships, and sponsorship teams driving institutional growth.",
-  },
-  {
-    icon: <Code className="w-6 h-6 text-royal-gold" />,
-    title: "Technology",
-    desc: "Engineers and digital product specialists building our platform.",
-  },
-];
 
 const PERKS = [
   {
@@ -66,21 +44,7 @@ export default function CareersPage() {
         />
 
         {/* Departments Hiring */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-16">
-          {DEPARTMENTS.map((dept, idx) => (
-            <Reveal key={dept.title} delay={idx * 0.1}>
-              <div className="p-8 bg-luxury-card border border-royal-gold/30 flex flex-col gap-4 h-full shadow-lg hover:border-royal-gold transition-colors">
-                <div className="w-12 h-12 rounded-full border border-royal-gold/50 bg-royal-red/30 flex items-center justify-center">
-                  {dept.icon}
-                </div>
-                <div>
-                  <h4 className="font-serif text-lg font-bold text-ivory mb-2">{dept.title}</h4>
-                  <p className="font-sans text-xs text-cream/80 leading-relaxed font-light">{dept.desc}</p>
-                </div>
-              </div>
-            </Reveal>
-          ))}
-        </div>
+        <CareerDepartments />
 
         <GoldDivider variant="crest" className="my-20" />
 

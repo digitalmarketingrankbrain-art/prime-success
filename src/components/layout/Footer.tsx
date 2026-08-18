@@ -134,10 +134,10 @@ export default function Footer() {
           {/* Newsletter */}
           <div className="flex flex-col gap-2">
             <h4 className="font-serif text-xs font-bold tracking-[0.2em] text-royal-gold uppercase border-b border-royal-gold/20 pb-1.5">
-              DISPATCHES
+              SUBSCRIBE
             </h4>
             <p className="font-sans text-xs text-cream/80 leading-relaxed font-light">
-              Receive private invitations and editorial dispatches from the Hall of Prime.
+              Get new magazine issues, award announcements, and private gala invitations delivered straight to your inbox.
             </p>
             {subscribed ? (
               <div className="flex items-center gap-2 mt-1 text-xs text-royal-gold font-sans font-semibold">
@@ -161,6 +161,9 @@ export default function Footer() {
                   <span>Subscribe</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </button>
+                <span className="text-[10px] text-cream/50 font-sans">
+                  No spam. Unsubscribe anytime.
+                </span>
               </form>
             )}
           </div>

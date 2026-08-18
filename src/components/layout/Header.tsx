@@ -108,17 +108,9 @@ export default function Header() {
           })}
         </nav>
 
-        {/* CTA & Theme Toggle */}
+        {/* Theme Toggle */}
         <div className="hidden lg:flex items-center gap-4">
           <ThemeToggle />
-          <a
-            href="/nominate"
-            onClick={(e) => handleNavClick(e, "/nominate")}
-            className="px-5 py-2.5 bg-[#6B0E16] border border-royal-gold/60 text-[#F9F5EC] text-xs font-bold tracking-[0.2em] uppercase hover:bg-[#8B121D] hover:border-royal-gold transition-all shadow-lg shadow-[#6B0E16]/30 flex items-center gap-2 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-royal-gold"
-          >
-            <span>NOMINATE</span>
-            <ChevronRight className="w-3.5 h-3.5 text-royal-gold group-hover:translate-x-0.5 transition-transform" />
-          </a>
         </div>
 
         {/* Mobile Hamburger & Theme Button */}
@@ -158,13 +150,6 @@ export default function Header() {
             );
           })}
         </nav>
-        <a
-          href="/nominate"
-          onClick={(e) => handleNavClick(e, "/nominate")}
-          className="w-full py-4 bg-[#6B0E16] border border-[#E5C158] text-center text-[#F9F5EC] font-bold text-xs tracking-[0.2em] uppercase cursor-pointer shadow-lg"
-        >
-          NOMINATE A LEADER
-        </a>
       </div>
     )}
     </>

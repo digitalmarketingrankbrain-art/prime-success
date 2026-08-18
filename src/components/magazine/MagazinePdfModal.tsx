@@ -1,8 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import { X, Download, FileText, Monitor, ChevronLeft, ChevronRight } from "lucide-react";
+import { useEffect, useState } from "react";
+import { X, Download } from "lucide-react";
 import { MagazineIssue } from "@/types";
+import MagazineBookReader from "./MagazineBookReader";
+import { useLenis } from "@/components/layout/SmoothScroll";
 
 interface Props {
   issue: MagazineIssue;
@@ -10,11 +12,21 @@ interface Props {
 }
 
 export default function MagazinePdfModal({ issue, onClose }: Props) {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [readerMode, setReaderMode] = useState<"PDF" | "SPREAD">("PDF");
+  const [readerMode, setReaderMode] = useState<"PDF" | "BOOK">("BOOK");
+  const lenis = useLenis();
 
-  const nextPage = () => setCurrentPage((prev) => Math.min(issue.pagesCount, prev + 1));
-  const prevPage = () => setCurrentPage((prev) => Math.max(1, prev - 1));
+  // Lock background page scroll while the reader is open. CSS `overflow: hidden`
+  // alone isn't enough — Lenis intercepts wheel events directly and still moves
+  // window.scrollY, so the underlying Lenis instance must be paused too.
+  useEffect(() => {
+    const prevOverflow = document.documentElement.style.overflow;
+    document.documentElement.style.overflow = "hidden";
+    lenis?.stop();
+    return () => {
+      document.documentElement.style.overflow = prevOverflow;
+      lenis?.start();
+    };
+  }, [lenis]);
 
   return (
     <div
@@ -39,20 +51,20 @@ export default function MagazinePdfModal({ issue, onClose }: Props) {
           {/* Mode Switcher */}
           <div className="hidden sm:flex items-center border border-royal-gold/30 p-1 bg-luxury-black">
             <button
+              onClick={() => setReaderMode("BOOK")}
+              className={`px-3 py-1 text-[10px] tracking-wider uppercase font-bold transition-colors ${
+                readerMode === "BOOK" ? "bg-royal-gold text-luxury-black" : "text-cream/70 hover:text-ivory"
+              }`}
+            >
+              BOOK VIEW
+            </button>
+            <button
               onClick={() => setReaderMode("PDF")}
               className={`px-3 py-1 text-[10px] tracking-wider uppercase font-bold transition-colors ${
                 readerMode === "PDF" ? "bg-royal-gold text-luxury-black" : "text-cream/70 hover:text-ivory"
               }`}
             >
               REAL PDF VIEW
-            </button>
-            <button
-              onClick={() => setReaderMode("SPREAD")}
-              className={`px-3 py-1 text-[10px] tracking-wider uppercase font-bold transition-colors ${
-                readerMode === "SPREAD" ? "bg-royal-gold text-luxury-black" : "text-cream/70 hover:text-ivory"
-              }`}
-            >
-              SUMMARY SPREAD
             </button>
           </div>
 
@@ -79,58 +91,19 @@ export default function MagazinePdfModal({ issue, onClose }: Props) {
       </div>
 
       {/* Main Reader Stage */}
-      <div className="flex-grow relative overflow-hidden bg-black/80 flex items-center justify-center p-4 sm:p-8">
+      <div className="flex-grow relative overflow-hidden bg-black/80 flex items-center justify-center p-2 sm:p-4">
         {readerMode === "PDF" ? (
           <iframe
             src={issue.pdfUrl?.replace("/view", "/preview")}
             title={`PDF Reader for ${issue.title}`}
             className="w-full h-full max-w-5xl border border-royal-gold/30 shadow-2xl bg-white"
           />
+        ) : issue.pdfUrl ? (
+          <MagazineBookReader pdfUrl={issue.pdfUrl} title={issue.title} />
         ) : (
-          <div className="max-w-4xl w-full bg-luxury-card border border-royal-gold/30 p-8 sm:p-12 text-ivory flex flex-col gap-6 max-h-full overflow-y-auto">
-            <div className="border-b border-royal-gold/20 pb-4">
-              <span className="text-xs font-sans text-royal-gold font-bold uppercase tracking-wider">
-                PAGE {currentPage} OF {issue.pagesCount}
-              </span>
-              <h3 className="font-serif text-2xl font-bold text-ivory mt-1">
-                SUMMARY SPREAD VIEW
-              </h3>
-            </div>
-            <p className="font-sans text-sm text-cream/80 leading-relaxed font-light">
-              You are reading page {currentPage} of the official digitized fortnightly print issue registered under Press Registrar General of India (No. {issue.prgiRegNo}). Switch to <strong>REAL PDF VIEW</strong> for high-resolution vector layout.
-            </p>
-          </div>
+          <p className="font-sans text-sm text-cream/70">No source file available for this issue.</p>
         )}
       </div>
-
-      {/* Reader Bottom Pagination Bar — only meaningful in SUMMARY SPREAD mode.
-          REAL PDF VIEW embeds Google Drive's own viewer, which has its own page
-          controls and exposes no way for this page to drive its position. */}
-      {readerMode === "SPREAD" && (
-        <div className="h-14 border-t border-royal-gold/20 px-6 flex items-center justify-between bg-luxury-dark text-xs font-sans text-cream/80">
-          <button
-            onClick={prevPage}
-            disabled={currentPage === 1}
-            className="flex items-center gap-1 hover:text-royal-gold disabled:opacity-30 disabled:hover:text-cream/80 cursor-pointer"
-          >
-            <ChevronLeft className="w-4 h-4" />
-            <span>PREVIOUS PAGE</span>
-          </button>
-
-          <span className="font-mono text-royal-gold">
-            PAGE {currentPage} / {issue.pagesCount}
-          </span>
-
-          <button
-            onClick={nextPage}
-            disabled={currentPage === issue.pagesCount}
-            className="flex items-center gap-1 hover:text-royal-gold disabled:opacity-30 disabled:hover:text-cream/80 cursor-pointer"
-          >
-            <span>NEXT PAGE</span>
-            <ChevronRight className="w-4 h-4" />
-          </button>
-        </div>
-      )}
     </div>
   );
 }
