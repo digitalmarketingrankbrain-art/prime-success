@@ -8,19 +8,12 @@ import { articlesData, magazinesData } from "@/data/mockData";
 import Reveal from "@/components/animations/Reveal";
 import Parallax from "@/components/animations/Parallax";
 import GoldDivider from "@/components/ui/GoldDivider";
-import { ArrowUpRight, Clock, BookOpen, Sparkles, Newspaper } from "lucide-react";
+import { ArrowUpRight, Clock, Newspaper } from "lucide-react";
 
 export const metadata = {
   title: "Prime Success Magazine — Digital Archive & Print Editions",
   description: "Explore complete digitized print editions, cover stories, and deep dive reports on global leaders.",
 };
-
-const EDITORIAL_SECTIONS = [
-  { name: "PRINT EDITIONS (PRGI)", count: `${magazinesData.length} Issues` },
-  { name: "LEADERSHIP DISPATCHES", count: "12 Issues" },
-  { name: "DEEP TECH & INNOVATION", count: "18 Reports" },
-  { name: "GLOBAL PHILANTHROPY", count: "9 Studies" },
-];
 
 export default function MagazinePage() {
   const coverStory = articlesData.find((a) => a.isCoverStory) || articlesData[0];
@@ -35,23 +28,6 @@ export default function MagazinePage() {
           title="PRIME SUCCESS MAGAZINE"
           subtitle="In-depth analysis, cover stories, and perspectives from the world's most influential leaders."
         />
-
-        {/* Magazine Editorial Pillars */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {EDITORIAL_SECTIONS.map((sec, idx) => (
-            <Reveal key={idx} delay={idx * 0.1}>
-              <Parallax speed={idx % 2 === 0 ? -15 : 15}>
-                <div className="p-6 bg-luxury-card border border-royal-gold/30 flex items-center justify-between shadow-lg shadow-luxury-black hover:border-royal-gold transition-colors">
-                  <div className="flex flex-col">
-                    <span className="font-serif text-sm font-bold text-ivory">{sec.name}</span>
-                    <span className="text-[11px] font-sans text-royal-gold font-semibold uppercase">{sec.count}</span>
-                  </div>
-                  <BookOpen className="w-5 h-5 text-royal-gold" />
-                </div>
-              </Parallax>
-            </Reveal>
-          ))}
-        </div>
 
         {/* REAL MAGAZINE COLLECTION ARCHIVE GRID */}
         <MagazineIssuesGrid issues={magazinesData} />
