@@ -1,22 +1,39 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { Radio, ChevronRight } from "lucide-react";
+import type { NewsPayload } from "@/lib/news";
 
-const TICKER_HEADLINES = [
-  "GST collections surge 15.4% to over ₹2.11 lakh crore in July 2026, driven by strong domestic and import activity",
-  "Nifty India Defence index scales fresh high of 9,912.75, gains for fourth straight session",
-  "NITI Aayog: India must sustain 9.25% nominal growth for 21 years to reach developed-nation status by 2047",
-  "Government reaffirms India's fuel-blending programme relies entirely on domestic supplies, no US ethanol commitment made",
-  "4 in 5 small businesses expect online sourcing to drive growth over the next three years, industry survey finds",
-  "India's economy shows resilience amid West Asia crisis as GST revenues keep climbing",
-  "Prime Success Excellence Awards 2026 nominations open on 15 July",
+const FALLBACK_HEADLINES = [
+  "Prime Success Excellence Awards 2026 nominations now open",
   "Volume 26 · Issue 07-02 of Prime Success Magazine now available worldwide",
 ];
 
-// Duplicated once so the -50% translateX marquee loop (see .animate-marquee in globals.css) is seamless
-const TICKER_ITEMS = [...TICKER_HEADLINES, ...TICKER_HEADLINES];
-
 export default function NewsTickerBar() {
+  const [headlines, setHeadlines] = useState<string[]>(FALLBACK_HEADLINES);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    fetch("/api/news")
+      .then((res) => res.json())
+      .then((data: NewsPayload) => {
+        if (cancelled) return;
+        const live = data.breaking.map((item) => `${item.title} — ${item.source}`);
+        if (live.length > 0) setHeadlines(live);
+      })
+      .catch(() => {
+        /* keep fallback headlines on failure */
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  // Duplicated once so the -50% translateX marquee loop (see .animate-marquee in globals.css) is seamless
+  const TICKER_ITEMS = [...headlines, ...headlines];
+
   return (
     <div className="w-full px-4 md:px-12 py-3 bg-luxury-black border-y border-royal-gold/15">
       <div className="max-w-7xl mx-auto">

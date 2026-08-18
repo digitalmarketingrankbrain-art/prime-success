@@ -5,7 +5,7 @@ import { MagazineIssue } from "@/types";
 import MagazineIssueCard from "./MagazineIssueCard";
 import Reveal from "@/components/animations/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { BookOpen, Layers, ShieldCheck, Sparkles, Filter } from "lucide-react";
+import { Filter } from "lucide-react";
 
 interface MagazineIssuesGridProps {
   issues: MagazineIssue[];
@@ -22,8 +22,6 @@ export default function MagazineIssuesGrid({ issues }: MagazineIssuesGridProps) 
       ? issues
       : issues.filter((issue) => issue.category === activeCategory);
 
-  const totalPagesCount = issues.reduce((acc, curr) => acc + curr.pagesCount, 0);
-
   return (
     <div className="my-20">
       <SectionHeading
@@ -32,49 +30,6 @@ export default function MagazineIssuesGrid({ issues }: MagazineIssuesGridProps) 
         title="EXPLORE THE MAGAZINE COLLECTION"
         subtitle="Access complete digitized print editions of Prime Success Media. Registered with the Press Registrar General of India (PRGI)."
       />
-
-      {/* Archive Quick Statistics Bar */}
-      <div className="my-10 p-6 bg-luxury-card border border-royal-gold/30 grid grid-cols-2 md:grid-cols-4 gap-6 text-center shadow-xl">
-        <div className="flex flex-col items-center">
-          <span className="font-serif text-3xl md:text-4xl font-bold text-gold-gradient">
-            {issues.length}
-          </span>
-          <span className="text-[11px] font-sans text-cream/80 uppercase font-semibold tracking-wider mt-1 flex items-center gap-1">
-            <BookOpen className="w-3.5 h-3.5 text-royal-gold" />
-            Official Issues
-          </span>
-        </div>
-
-        <div className="flex flex-col items-center">
-          <span className="font-serif text-3xl md:text-4xl font-bold text-gold-gradient">
-            {totalPagesCount}
-          </span>
-          <span className="text-[11px] font-sans text-cream/80 uppercase font-semibold tracking-wider mt-1 flex items-center gap-1">
-            <Layers className="w-3.5 h-3.5 text-royal-gold" />
-            Editorial Pages
-          </span>
-        </div>
-
-        <div className="flex flex-col items-center">
-          <span className="font-serif text-3xl md:text-4xl font-bold text-gold-gradient">
-            100%
-          </span>
-          <span className="text-[11px] font-sans text-cream/80 uppercase font-semibold tracking-wider mt-1 flex items-center gap-1">
-            <ShieldCheck className="w-3.5 h-3.5 text-royal-gold" />
-            PRGI Registered
-          </span>
-        </div>
-
-        <div className="flex flex-col items-center">
-          <span className="font-serif text-3xl md:text-4xl font-bold text-gold-gradient">
-            2026
-          </span>
-          <span className="text-[11px] font-sans text-cream/80 uppercase font-semibold tracking-wider mt-1 flex items-center gap-1">
-            <Sparkles className="w-3.5 h-3.5 text-royal-gold" />
-            Delhi Edition
-          </span>
-        </div>
-      </div>
 
       {/* Filter Category Tabs */}
       <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-10 border-b border-royal-gold/20 no-scrollbar">

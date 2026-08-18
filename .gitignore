@@ -39,6 +39,9 @@ yarn-error.log*
 # large magazine PDFs (host externally, not in git)
 /public/magazines
 
+# hiring applicant data — resumes & PII, never commit
+/data
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Cinzel, Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import SiteChrome from "@/components/layout/SiteChrome";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import { PageTransitionProvider } from "@/components/animations/PageTransition";
 
@@ -86,9 +85,7 @@ export default function RootLayout({
       >
         <SmoothScroll>
           <PageTransitionProvider>
-            <Header />
-            <main className="flex-1 w-full relative">{children}</main>
-            <Footer />
+            <SiteChrome>{children}</SiteChrome>
           </PageTransitionProvider>
         </SmoothScroll>
       </body>

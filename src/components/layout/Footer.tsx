@@ -79,8 +79,9 @@ export default function Footer() {
               <span className="text-cream/80 leading-normal">
                 4th Floor, Aggarwal Metro Height, 453, Netaji Subhash Place, Pitampura, Delhi 110034
               </span>
-              <div className="flex items-center gap-4 mt-1 text-xs font-mono text-royal-gold">
+              <div className="flex items-center gap-4 mt-1 text-xs font-mono text-royal-gold flex-wrap">
                 <a href="mailto:info@primesuccess.media" className="hover:underline hover:text-ivory transition-colors">info@primesuccess.media</a>
+                <a href="mailto:press@primesuccess.media" className="hover:underline hover:text-ivory transition-colors">press@primesuccess.media</a>
               </div>
             </div>
 
@@ -127,7 +128,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-2 font-sans text-xs tracking-wider text-cream">
               <li><Link href="/magazine" className="hover:text-royal-gold transition-colors">Magazine</Link></li>
               <li><Link href="/nominate" className="hover:text-royal-gold transition-colors">Submit Nomination</Link></li>
-              <li><Link href="/contact" className="hover:text-royal-gold transition-colors">Press Concierge</Link></li>
+              <li><Link href="/contact" className="hover:text-royal-gold transition-colors">Contact Us</Link></li>
             </ul>
           </div>
 
@@ -174,9 +175,9 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-sans text-cream/60">
           <p>© 2026 PRIME SUCCESS. ALL RIGHTS RESERVED.</p>
           <div className="flex items-center gap-6">
-            <Link href="#" className="hover:text-royal-gold transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-royal-gold transition-colors">Terms of Distinction</Link>
-            <Link href="#" className="hover:text-royal-gold transition-colors">Editorial Ethics</Link>
+            <Link href="/privacy" className="hover:text-royal-gold transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-royal-gold transition-colors">Terms of Distinction</Link>
+            <Link href="/editorial-ethics" className="hover:text-royal-gold transition-colors">Editorial Ethics</Link>
           </div>
         </div>
       </div>

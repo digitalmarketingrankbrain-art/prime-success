@@ -33,9 +33,15 @@ export default function ContactHeadquarters() {
       </div>
 
       {/* Email */}
-      <div className="flex items-center gap-4 text-xs font-sans text-cream/80 border-t border-royal-gold/15 pt-4 font-mono">
-        <Mail className="w-5 h-5 text-royal-gold flex-shrink-0" />
-        <a href="mailto:info@primesuccess.media" className="hover:text-royal-gold transition-colors">info@primesuccess.media</a>
+      <div className="flex flex-col gap-2 text-xs font-sans text-cream/80 border-t border-royal-gold/15 pt-4 font-mono">
+        <div className="flex items-center gap-4">
+          <Mail className="w-5 h-5 text-royal-gold flex-shrink-0" />
+          <a href="mailto:info@primesuccess.media" className="hover:text-royal-gold transition-colors">info@primesuccess.media</a>
+        </div>
+        <div className="flex items-center gap-4">
+          <Mail className="w-5 h-5 text-royal-gold flex-shrink-0" />
+          <a href="mailto:press@primesuccess.media" className="hover:text-royal-gold transition-colors">press@primesuccess.media</a>
+        </div>
       </div>
     </div>
   );

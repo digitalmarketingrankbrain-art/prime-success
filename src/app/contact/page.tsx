@@ -25,7 +25,11 @@ export default function ContactPage() {
             <div className="p-8 bg-royal-red-dark border border-royal-gold/30 flex flex-col gap-3 text-xs font-sans text-[#E8DCC4] shadow-xl">
               <h4 className="font-serif text-lg font-bold text-[#F9F5EC]">PRESS & MEDIA DESK</h4>
               <p className="font-light leading-relaxed">
-                For media credentials, broadcast rights, gala authentication, or syndication of Prime Success magazine stories, email press@primesuccess.media.
+                For media credentials, broadcast rights, gala authentication, or syndication of Prime Success magazine stories, email{" "}
+                <a href="mailto:press@primesuccess.media" className="text-royal-gold hover:underline font-semibold">
+                  press@primesuccess.media
+                </a>
+                .
               </p>
             </div>
           </div>

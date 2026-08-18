@@ -1,25 +1,73 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle2, Send, Upload } from "lucide-react";
+import { CheckCircle2, Send, Upload, AlertTriangle, Loader2 } from "lucide-react";
 
 interface Props {
   department: string;
 }
 
+const EXPERIENCE_OPTIONS = ["Fresher", "1–3 years", "3–5 years", "5–10 years", "10+ years"];
+const NOTICE_OPTIONS = ["Immediate", "15 days", "1 month", "2 months", "3+ months"];
+
+const initialFormData = {
+  fullName: "",
+  email: "",
+  phone: "",
+  location: "",
+  experience: EXPERIENCE_OPTIONS[0],
+  noticePeriod: NOTICE_OPTIONS[0],
+  portfolioUrl: "",
+  expectedCtc: "",
+  message: "",
+};
+
 export default function CareerApplicationForm({ department }: Props) {
   const [submitted, setSubmitted] = useState(false);
-  const [resumeName, setResumeName] = useState<string | null>(null);
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
+  const [emailSent, setEmailSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [resumeFile, setResumeFile] = useState<File | null>(null);
+  const [formData, setFormData] = useState(initialFormData);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    if (!resumeFile) {
+      setError("Please attach your resume.");
+      return;
+    }
+
+    setSubmitting(true);
+    setError(null);
+
+    try {
+      const body = new FormData();
+      body.set("fullName", formData.fullName);
+      body.set("email", formData.email);
+      body.set("phone", formData.phone);
+      body.set("department", department);
+      body.set("location", formData.location);
+      body.set("experience", formData.experience);
+      body.set("noticePeriod", formData.noticePeriod);
+      body.set("portfolioUrl", formData.portfolioUrl);
+      body.set("expectedCtc", formData.expectedCtc);
+      body.set("message", formData.message);
+      body.set("resume", resumeFile);
+
+      const res = await fetch("/api/careers/apply", { method: "POST", body });
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "Something went wrong. Please try again.");
+      }
+
+      setEmailSent(Boolean(data.emailSent));
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -38,9 +86,16 @@ export default function CareerApplicationForm({ department }: Props) {
         </div>
         <p className="font-sans text-sm text-cream/80 max-w-md leading-relaxed font-light">
           Your application for <strong className="text-ivory">{department}</strong> has been recorded. Our HR team will review it and reach out if there&apos;s a fit.
+          {emailSent
+            ? " A confirmation email is on its way to your inbox."
+            : " (Email confirmation is currently unavailable — your application was still saved.)"}
         </p>
         <button
-          onClick={() => setSubmitted(false)}
+          onClick={() => {
+            setSubmitted(false);
+            setFormData(initialFormData);
+            setResumeFile(null);
+          }}
           className="px-8 py-3.5 bg-royal-gold/15 hover:bg-royal-gold text-royal-gold hover:text-luxury-black border border-royal-gold text-xs tracking-[0.2em] font-sans font-bold uppercase transition-all duration-300 cursor-pointer"
         >
           SUBMIT ANOTHER APPLICATION
@@ -62,6 +117,13 @@ export default function CareerApplicationForm({ department }: Props) {
           {department}
         </h3>
       </div>
+
+      {error && (
+        <div className="flex items-center gap-2 px-4 py-3 bg-royal-red/10 border border-royal-red/40 text-royal-red text-xs font-sans font-semibold">
+          <AlertTriangle className="w-4 h-4 flex-shrink-0" />
+          <span>{error}</span>
+        </div>
+      )}
 
       <div className="flex flex-col gap-1.5">
         <label htmlFor="career-fullname" className="text-xs font-sans font-bold text-royal-gold uppercase tracking-[0.15em] flex items-center gap-1">
@@ -116,6 +178,97 @@ export default function CareerApplicationForm({ department }: Props) {
         </div>
       </div>
 
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div className="flex flex-col gap-1.5">
+          <label htmlFor="career-location" className="text-xs font-sans font-bold text-royal-gold uppercase tracking-[0.15em] flex items-center gap-1">
+            <span>CURRENT LOCATION</span>
+            <span className="text-royal-gold" aria-hidden="true">*</span>
+          </label>
+          <input
+            id="career-location"
+            type="text"
+            required
+            aria-required="true"
+            value={formData.location}
+            onChange={(e) => setFormData({ ...formData, location: e.target.value })}
+            placeholder="e.g. New Delhi, India"
+            className="w-full h-12 px-4 py-3 bg-luxury-dark border border-royal-gold/30 text-sm text-ivory placeholder:text-cream/35 focus:outline-none focus:border-royal-gold focus:ring-1 focus:ring-royal-gold/50 transition-all rounded-none"
+          />
+        </div>
+
+        <div className="flex flex-col gap-1.5">
+          <label htmlFor="career-portfolio" className="text-xs font-sans font-bold text-royal-gold uppercase tracking-[0.15em]">
+            LINKEDIN / PORTFOLIO URL
+          </label>
+          <input
+            id="career-portfolio"
+            type="url"
+            value={formData.portfolioUrl}
+            onChange={(e) => setFormData({ ...formData, portfolioUrl: e.target.value })}
+            placeholder="https://linkedin.com/in/..."
+            className="w-full h-12 px-4 py-3 bg-luxury-dark border border-royal-gold/30 text-sm text-ivory placeholder:text-cream/35 focus:outline-none focus:border-royal-gold focus:ring-1 focus:ring-royal-gold/50 transition-all rounded-none"
+          />
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+        <div className="flex flex-col gap-1.5">
+          <label htmlFor="career-experience" className="text-xs font-sans font-bold text-royal-gold uppercase tracking-[0.15em] flex items-center gap-1">
+            <span>EXPERIENCE</span>
+            <span className="text-royal-gold" aria-hidden="true">*</span>
+          </label>
+          <div className="relative">
+            <select
+              id="career-experience"
+              required
+              value={formData.experience}
+              onChange={(e) => setFormData({ ...formData, experience: e.target.value })}
+              className="w-full h-12 px-4 py-3 bg-luxury-dark border border-royal-gold/30 text-sm text-ivory focus:outline-none focus:border-royal-gold focus:ring-1 focus:ring-royal-gold/50 transition-all appearance-none pr-8 cursor-pointer rounded-none"
+            >
+              {EXPERIENCE_OPTIONS.map((opt) => (
+                <option key={opt} value={opt} className="bg-luxury-black text-ivory">{opt}</option>
+              ))}
+            </select>
+            <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-royal-gold/70 text-xs">▼</div>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-1.5">
+          <label htmlFor="career-notice" className="text-xs font-sans font-bold text-royal-gold uppercase tracking-[0.15em] flex items-center gap-1">
+            <span>NOTICE PERIOD</span>
+            <span className="text-royal-gold" aria-hidden="true">*</span>
+          </label>
+          <div className="relative">
+            <select
+              id="career-notice"
+              required
+              value={formData.noticePeriod}
+              onChange={(e) => setFormData({ ...formData, noticePeriod: e.target.value })}
+              className="w-full h-12 px-4 py-3 bg-luxury-dark border border-royal-gold/30 text-sm text-ivory focus:outline-none focus:border-royal-gold focus:ring-1 focus:ring-royal-gold/50 transition-all appearance-none pr-8 cursor-pointer rounded-none"
+            >
+              {NOTICE_OPTIONS.map((opt) => (
+                <option key={opt} value={opt} className="bg-luxury-black text-ivory">{opt}</option>
+              ))}
+            </select>
+            <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-royal-gold/70 text-xs">▼</div>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-1.5">
+          <label htmlFor="career-ctc" className="text-xs font-sans font-bold text-royal-gold uppercase tracking-[0.15em]">
+            EXPECTED CTC
+          </label>
+          <input
+            id="career-ctc"
+            type="text"
+            value={formData.expectedCtc}
+            onChange={(e) => setFormData({ ...formData, expectedCtc: e.target.value })}
+            placeholder="e.g. ₹8 LPA"
+            className="w-full h-12 px-4 py-3 bg-luxury-dark border border-royal-gold/30 text-sm text-ivory placeholder:text-cream/35 focus:outline-none focus:border-royal-gold focus:ring-1 focus:ring-royal-gold/50 transition-all rounded-none"
+          />
+        </div>
+      </div>
+
       <div className="flex flex-col gap-1.5">
         <label htmlFor="career-resume" className="text-xs font-sans font-bold text-royal-gold uppercase tracking-[0.15em] flex items-center gap-1">
           <span>RESUME / CV</span>
@@ -126,14 +279,14 @@ export default function CareerApplicationForm({ department }: Props) {
           className="w-full flex items-center gap-3 px-4 py-3 bg-luxury-dark border border-royal-gold/30 text-sm text-cream/70 hover:border-royal-gold/60 transition-all cursor-pointer rounded-none"
         >
           <Upload className="w-4 h-4 text-royal-gold flex-shrink-0" />
-          <span className="truncate">{resumeName ?? "Upload PDF or DOC — max 5MB"}</span>
+          <span className="truncate">{resumeFile?.name ?? "Upload PDF or DOC — max 5MB"}</span>
         </label>
         <input
           id="career-resume"
           type="file"
           required
           accept=".pdf,.doc,.docx"
-          onChange={(e) => setResumeName(e.target.files?.[0]?.name ?? null)}
+          onChange={(e) => setResumeFile(e.target.files?.[0] ?? null)}
           className="sr-only"
         />
       </div>
@@ -154,11 +307,21 @@ export default function CareerApplicationForm({ department }: Props) {
 
       <button
         type="submit"
-        className="w-full h-14 bg-royal-gold hover:bg-royal-gold-light text-luxury-black font-sans text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 shadow-xl shadow-royal-gold/10 flex items-center justify-center gap-3 cursor-pointer group mt-2 rounded-none"
+        disabled={submitting}
+        className="w-full h-14 bg-royal-gold hover:bg-royal-gold-light text-luxury-black font-sans text-xs tracking-[0.2em] font-bold uppercase transition-all duration-300 shadow-xl shadow-royal-gold/10 flex items-center justify-center gap-3 cursor-pointer group mt-2 rounded-none disabled:opacity-60 disabled:cursor-not-allowed"
         aria-label={`Submit application for ${department}`}
       >
-        <Send className="w-4 h-4 text-luxury-black group-hover:translate-x-1 transition-transform" />
-        <span>SUBMIT APPLICATION</span>
+        {submitting ? (
+          <>
+            <Loader2 className="w-4 h-4 text-luxury-black animate-spin" />
+            <span>SUBMITTING…</span>
+          </>
+        ) : (
+          <>
+            <Send className="w-4 h-4 text-luxury-black group-hover:translate-x-1 transition-transform" />
+            <span>SUBMIT APPLICATION</span>
+          </>
+        )}
       </button>
     </form>
   );
