@@ -29,8 +29,6 @@ export default function LiveVisitorCounter() {
       localStorage.setItem(STORAGE_COUNT_KEY, String(initial));
     }
 
-    setCount(initial);
-
     let timeoutId: ReturnType<typeof setTimeout>;
     const scheduleNext = () => {
       const delay = 30000 + Math.random() * 20000; // 30-50s
@@ -43,7 +41,10 @@ export default function LiveVisitorCounter() {
         scheduleNext();
       }, delay);
     };
-    scheduleNext();
+    timeoutId = setTimeout(() => {
+      setCount(initial);
+      scheduleNext();
+    }, 0);
 
     return () => clearTimeout(timeoutId);
   }, []);

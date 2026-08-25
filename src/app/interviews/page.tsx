@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Loader2 } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { interviewsData } from "@/data/mockData";
 import { Interview } from "@/types";
 import InterviewHeroPlayer from "@/components/interviews/InterviewHeroPlayer";
 import InterviewCategoryFilters from "@/components/interviews/InterviewCategoryFilters";
@@ -19,16 +19,32 @@ const CATEGORIES = [
 ];
 
 export default function InterviewsPage() {
+  const [interviews, setInterviews] = useState<Interview[] | null>(null);
   const [selectedCategory, setSelectedCategory] = useState("ALL");
   const [activeInterview, setActiveInterview] = useState<Interview | null>(null);
 
-  const featuredInterview =
-    interviewsData.find((i) => i.isFeatured) || interviewsData[0];
+  useEffect(() => {
+    fetch("/api/interviews")
+      .then((res) => (res.ok ? res.json() : { interviews: [] }))
+      .then((data) => setInterviews(data.interviews ?? []))
+      .catch(() => setInterviews([]));
+  }, []);
+
+  if (!interviews) {
+    return (
+      <div className="pt-32 pb-20 bg-luxury-black text-ivory min-h-screen flex items-center justify-center gap-3 text-cream/70">
+        <Loader2 className="w-5 h-5 text-royal-gold animate-spin" />
+        <span className="font-sans text-xs uppercase tracking-widest">Loading interviews…</span>
+      </div>
+    );
+  }
+
+  const featuredInterview = interviews.find((i) => i.isFeatured) || interviews[0];
 
   const filteredInterviews =
     selectedCategory === "ALL"
-      ? interviewsData
-      : interviewsData.filter((i) => i.category === selectedCategory);
+      ? interviews
+      : interviews.filter((i) => i.category === selectedCategory);
 
   return (
     <div className="pt-32 pb-20 bg-luxury-black text-ivory min-h-screen">
@@ -41,10 +57,12 @@ export default function InterviewsPage() {
         />
 
         {/* Featured Video Player */}
-        <InterviewHeroPlayer
-          featuredInterview={featuredInterview}
-          onPlay={(interview) => setActiveInterview(interview)}
-        />
+        {featuredInterview && (
+          <InterviewHeroPlayer
+            featuredInterview={featuredInterview}
+            onPlay={(interview) => setActiveInterview(interview)}
+          />
+        )}
 
         {/* Category Filters */}
         <InterviewCategoryFilters

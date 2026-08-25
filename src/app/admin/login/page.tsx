@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, Suspense } from "react";
+import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Lock, AlertTriangle, Loader2 } from "lucide-react";
+import { AlertTriangle, Loader2 } from "lucide-react";
 
 function AdminLoginForm() {
   const router = useRouter();
@@ -44,13 +45,17 @@ function AdminLoginForm() {
         onSubmit={handleSubmit}
         className="w-full max-w-sm p-8 bg-luxury-card border border-royal-gold/30 flex flex-col gap-5 shadow-2xl"
       >
-        <div className="flex items-center gap-2 text-royal-gold">
-          <Lock className="w-5 h-5" />
-          <h1 className="font-serif text-xl font-bold text-ivory">Admin Login</h1>
+        <div className="flex flex-col items-center text-center gap-3 pb-1">
+          <div className="relative w-11 h-11">
+            <Image src="/images/icon.png" alt="Prime Success Media" fill className="object-contain" priority />
+          </div>
+          <div>
+            <h1 className="font-serif text-xl font-bold text-ivory">Admin Sign In</h1>
+            <p className="font-sans text-xs text-cream/60 mt-1">
+              Prime Success Media administration
+            </p>
+          </div>
         </div>
-        <p className="font-sans text-xs text-cream/70">
-          Sign in to access the Prime Success Media admin dashboard.
-        </p>
 
         {error && (
           <div className="flex items-center gap-2 px-3 py-2.5 bg-royal-red/10 border border-royal-red/40 text-royal-red text-xs font-sans font-semibold">

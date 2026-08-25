@@ -78,7 +78,7 @@ export default function CareersPage() {
             DON&apos;T SEE YOUR ROLE LISTED?
           </h3>
           <p className="font-sans text-sm text-[#E8DCC4] max-w-xl leading-relaxed font-light">
-            We're always open to hearing from exceptional talent. Send your resume and a brief note about yourself to our HR team.
+            We&apos;re always open to hearing from exceptional talent. Send your resume and a brief note about yourself to our HR team.
           </p>
           <a
             href="mailto:info@primesuccess.media"

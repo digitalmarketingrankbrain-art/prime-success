@@ -42,7 +42,9 @@ export default function SmoothScroll({ children }: SmoothScrollProps) {
     });
 
     lenisRef.current = lenis;
-    setLenisInstance(lenis);
+    const mountTimeoutId = window.setTimeout(() => {
+      setLenisInstance(lenis);
+    }, 0);
 
     // Connect Lenis to GSAP ScrollTrigger ticker smoothly
     lenis.on("scroll", () => {
@@ -58,6 +60,7 @@ export default function SmoothScroll({ children }: SmoothScrollProps) {
     gsap.ticker.lagSmoothing(500, 33);
 
     return () => {
+      window.clearTimeout(mountTimeoutId);
       gsap.ticker.remove(updateTicker);
       lenis.destroy();
       lenisRef.current = null;

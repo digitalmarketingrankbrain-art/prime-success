@@ -10,9 +10,13 @@ export default function ThemeToggle() {
   const [theme, setTheme] = useState<Theme>("dark");
 
   useEffect(() => {
-    setMounted(true);
-    const isLight = document.documentElement.classList.contains("light");
-    setTheme(isLight ? "light" : "dark");
+    const timeoutId = window.setTimeout(() => {
+      setMounted(true);
+      const isLight = document.documentElement.classList.contains("light");
+      setTheme(isLight ? "light" : "dark");
+    }, 0);
+
+    return () => window.clearTimeout(timeoutId);
   }, []);
 
   const toggleTheme = () => {

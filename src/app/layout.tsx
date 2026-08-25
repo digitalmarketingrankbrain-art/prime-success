@@ -75,6 +75,18 @@ export default function RootLayout({
         <Script id="theme-script" strategy="beforeInteractive">
           {themeScript}
         </Script>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-SQHKF551CY"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-SQHKF551CY');
+          `}
+        </Script>
         <link rel="icon" href="/images/icon.png" type="image/png" sizes="any" />
         <link rel="shortcut icon" href="/images/icon.png" />
         <link rel="apple-touch-icon" href="/images/icon.png" />

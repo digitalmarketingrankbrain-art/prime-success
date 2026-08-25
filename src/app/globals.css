@@ -15,6 +15,13 @@
     --border-gold: rgba(229, 193, 88, 0.3);
     --gold-primary: #E5C158;
     --gold-dark: #B38E22;
+
+    --status-success: #34D399;
+    --status-success-bg: rgba(52, 211, 153, 0.1);
+    --status-danger: #F87171;
+    --status-danger-bg: rgba(248, 113, 113, 0.12);
+    --status-danger-bg-hover: rgba(153, 27, 27, 0.45);
+    --status-danger-border: rgba(239, 68, 68, 0.4);
   }
 
   /* Ultra-Luxurious High-Contrast Royal Light Mode */
@@ -28,6 +35,13 @@
     --gold-primary: #7A5B0B;
     --gold-dark: #563F05;
     --surface-shadow: rgba(35, 25, 5, 0.08);
+
+    --status-success: #047857;
+    --status-success-bg: rgba(4, 120, 87, 0.08);
+    --status-danger: #B91C1C;
+    --status-danger-bg: rgba(185, 28, 28, 0.07);
+    --status-danger-bg-hover: rgba(185, 28, 28, 0.14);
+    --status-danger-border: rgba(185, 28, 28, 0.35);
   }
 }
 
@@ -42,6 +56,12 @@
   --color-luxury-card: var(--bg-card);
   --color-ivory: var(--text-ivory);
   --color-cream: var(--text-cream);
+  --color-success: var(--status-success);
+  --color-success-bg: var(--status-success-bg);
+  --color-danger: var(--status-danger);
+  --color-danger-bg: var(--status-danger-bg);
+  --color-danger-bg-hover: var(--status-danger-bg-hover);
+  --color-danger-border: var(--status-danger-border);
 
   --font-serif-royal: var(--font-cinzel), serif;
   --font-serif-editorial: var(--font-playfair), serif;
