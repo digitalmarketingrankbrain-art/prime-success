@@ -13,17 +13,21 @@ async function fetchDriveFile(id: string): Promise<Response> {
     return first;
   }
 
-  // Large files return an HTML "can't scan for viruses" confirmation page
-  // instead of the file. Pull the confirm token out of it and retry.
+  // Files too large to virus-scan return an HTML warning page with a
+  // "Download anyway" form instead of the file. The confirmation is now
+  // carried in that form's hidden inputs (confirm + a per-request uuid),
+  // not as a bare "confirm=" token in the page text.
   const html = await first.text();
-  const confirmMatch = html.match(/confirm=([0-9A-Za-z_-]+)/);
   const cookie = first.headers.get("set-cookie") ?? "";
 
-  if (!confirmMatch) {
+  const confirmValue = html.match(/name="confirm"\s+value="([^"]*)"/)?.[1];
+  const uuidValue = html.match(/name="uuid"\s+value="([^"]*)"/)?.[1];
+
+  if (!confirmValue || !uuidValue) {
     throw new Error("Could not locate download confirmation token");
   }
 
-  const confirmedUrl = `https://drive.google.com/uc?export=download&confirm=${confirmMatch[1]}&id=${id}`;
+  const confirmedUrl = `https://drive.usercontent.google.com/download?id=${id}&export=download&confirm=${confirmValue}&uuid=${uuidValue}`;
   return fetch(confirmedUrl, {
     redirect: "follow",
     headers: cookie ? { cookie } : undefined,
