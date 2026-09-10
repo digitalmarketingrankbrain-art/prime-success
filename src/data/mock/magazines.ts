@@ -2,6 +2,49 @@ import { MagazineIssue } from "@/types";
 
 export const magazinesData: MagazineIssue[] = [
   {
+    "id": "issue-2026-08-01",
+    "slug": "prime-success-magazine-2026-08-issue-01",
+    "issueNumber": "Issue 08-01",
+    "title": "PRIME SUCCESS · AUGUST 2026",
+    "subtitle": "Official Fortnightly Print & Digital Release — 1st Fortnightly Edition (2026)",
+    "monthYear": "AUGUST 2026",
+    "category": "SPECIAL PRINT EDITION",
+    "coverImage": "/magazines/covers/prime_success_2026_08_issue_01.jpg",
+    "pdfUrl": "/magazines/pdf/prime_success_2026_08_issue_01.pdf",
+    "pagesCount": 27,
+    "prgiRegNo": "DELENG/2023/90580",
+    "description": "Official digitized fortnightly print edition of Prime Success Media (August 2026, Volume 10). Registered with the Press Registrar General of India.",
+    "tableOfContents": [
+      {
+        "page": 1,
+        "title": "Cover Feature & Publisher's Mandate — August 2026",
+        "category": "EDITORIAL"
+      },
+      {
+        "page": 8,
+        "title": "National Leadership & Governance Dispatches",
+        "category": "GOVERNANCE"
+      },
+      {
+        "page": 16,
+        "title": "Industrial Innovation & Infrastructure Corridors",
+        "category": "INNOVATION"
+      },
+      {
+        "page": 24,
+        "title": "Public Opinion Polls & Verified Survey Insights",
+        "category": "POLLS"
+      },
+      {
+        "page": 27,
+        "title": "Laureates Hall of Fame & PRGI Compliance",
+        "category": "HONORS"
+      }
+    ],
+    "isCurrentIssue": true,
+    "isFeatured": true
+  },
+  {
     "id": "issue-2026-07-02",
     "slug": "prime-success-magazine-2026-07-issue-02",
     "issueNumber": "Issue 07-02",
@@ -41,7 +84,7 @@ export const magazinesData: MagazineIssue[] = [
         "category": "HONORS"
       }
     ],
-    "isCurrentIssue": true,
+    "isCurrentIssue": false,
     "isFeatured": true
   },
   {
@@ -84,7 +127,7 @@ export const magazinesData: MagazineIssue[] = [
         "category": "HONORS"
       }
     ],
-    "isCurrentIssue": true,
+    "isCurrentIssue": false,
     "isFeatured": true
   },
   {
@@ -854,6 +897,49 @@ export const magazinesData: MagazineIssue[] = [
       },
       {
         "page": 27,
+        "title": "Laureates Hall of Fame & PRGI Compliance",
+        "category": "HONORS"
+      }
+    ],
+    "isCurrentIssue": false,
+    "isFeatured": false
+  },
+  {
+    "id": "issue-2025-06-01",
+    "slug": "prime-success-magazine-2025-06-issue-01",
+    "issueNumber": "Issue 06-01",
+    "title": "PRIME SUCCESS · JUNE 2025",
+    "subtitle": "Official Fortnightly Print & Digital Release — 1st Fortnightly Edition (2025)",
+    "monthYear": "JUNE 2025",
+    "category": "SPECIAL PRINT EDITION",
+    "coverImage": "/magazines/covers/prime_success_2025_06_issue_01.jpg",
+    "pdfUrl": "/magazines/pdf/prime_success_2025_06_issue_01.pdf",
+    "pagesCount": 26,
+    "prgiRegNo": "DELENG/2023/90580",
+    "description": "Official digitized fortnightly print edition of Prime Success Media (June 2025, 1st Fortnightly Edition). Registered with the Press Registrar General of India.",
+    "tableOfContents": [
+      {
+        "page": 1,
+        "title": "Cover Feature & Publisher's Mandate — June 2025",
+        "category": "EDITORIAL"
+      },
+      {
+        "page": 8,
+        "title": "National Leadership & Governance Dispatches",
+        "category": "GOVERNANCE"
+      },
+      {
+        "page": 16,
+        "title": "Industrial Innovation & Infrastructure Corridors",
+        "category": "INNOVATION"
+      },
+      {
+        "page": 24,
+        "title": "Public Opinion Polls & Verified Survey Insights",
+        "category": "POLLS"
+      },
+      {
+        "page": 26,
         "title": "Laureates Hall of Fame & PRGI Compliance",
         "category": "HONORS"
       }
